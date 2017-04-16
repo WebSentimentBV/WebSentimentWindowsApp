@@ -1,0 +1,28 @@
+3.De database gebouwd (screenshot van gemaakte db)
+
+
+
+( )4.procedure van database gegevens hoe ga je je db vullen.
+	- Er komt data hoe gaat dat gebeuren?
+
+( )5. taakverdeling tarik doet dit en santino doet dit zoveel uur.
+
+(X)6. muis printer emulator
+
+( )7. tarik weet wel.
+
+( )8. verslag maken opdrachtgever heeft alles zien werken en afgeteken.
+	- alle dingen die die anders wil goed veranderen.
+
+( )9. funct kijkne voor functies doet die het
+	- tech is over code engels talig logische naam knoppen classes gebruikt
+	kan het uitbereiden.
+	-acceptatie hoe zit het met betalingen func en tech is gepasserd laten weten.
+	word het geaccepteerd door de opdracht gever hoelang is er garantie testtermijn.
+
+( )10. tool die test of je programma goed geprogrameerd is. unit test of bex ofzo.
+
+11. functionele test: 2 collumen positief en negatief. Verwachtte uitvoer ook erbij zetten,
+de vragen uit het functionele ontwerp halen. VOltoed de knop aan deze afmetingen..?
+Op het eind is de test gepasseerd?
+
