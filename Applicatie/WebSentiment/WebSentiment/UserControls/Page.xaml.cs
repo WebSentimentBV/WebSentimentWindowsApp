@@ -22,6 +22,12 @@ namespace WebSentiment.UserControls
         public Page()
         {
             this.InitializeComponent();
+            LoadHeader();
+        }
+        public void LoadHeader()
+        {
+            Header.PageHeader pageHeader = new Header.PageHeader();
+            spHeader.Children.Add(pageHeader);
         }
     }
 }

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WebSentiment.Assets">
+
+    <!-- Standart WebSentiment Style Colors -->
+
+    <SolidColorBrush x:Key="AppBackgroundWhite" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="AppBackgroundGrey" Color="#353535" />
+    <SolidColorBrush x:Key="AppBackgroundOrange" Color="#EC6707" />
+
+</ResourceDictionary>
