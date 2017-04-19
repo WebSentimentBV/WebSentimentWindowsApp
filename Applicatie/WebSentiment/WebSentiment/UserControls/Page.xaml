@@ -6,13 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignHeight="1280"
+    d:DesignWidth="768">
 
     <Grid>
         <StackPanel x:Name="spPage">
-            <StackPanel x:Name="spHeader" Height="50"></StackPanel>
-            <StackPanel x:Name="spActivity" Height="250"></StackPanel>
+            <StackPanel x:Name="spHeader" Height="280"></StackPanel>
+            <StackPanel x:Name="spActivity" Height="1000"></StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

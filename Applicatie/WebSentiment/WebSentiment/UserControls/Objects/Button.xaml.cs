@@ -15,21 +15,24 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace WebSentiment.UserControls
+namespace WebSentiment.UserControls.Objects
 {
-    public sealed partial class Page : UserControl
+    public sealed partial class Button : UserControl
     {
-        public Page()
+        //PROPERTIES
+        private int categoryID;
+        private string categoryName;
+        //CONSTRUCTOR
+        public Button(int categoryID, string categoryName)
         {
             this.InitializeComponent();
-            LoadHeader();
+            this.categoryID = categoryID;
+            this.categoryName = categoryName;
         }
-        public void LoadHeader()
+
+        private void LoadButton()
         {
-            Header.PageHeader pageHeader = new Header.PageHeader();
-            spHeader.Children.Add(pageHeader);
-            Activity.Menu pageMenu = new Activity.Menu();
-            spActivity.Children.Add(pageMenu);
+            txtPageName.Text = categoryName;
         }
     }
 }
