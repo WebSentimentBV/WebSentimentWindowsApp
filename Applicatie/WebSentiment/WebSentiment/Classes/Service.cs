@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebSentiment.Classes
 {
-    class Service
+    public class Service
     {
         //VARIABLES
         public int serviceID { get; set; }

@@ -1,12 +1,15 @@
-﻿using System;
+﻿using SQLite.Net;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +17,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using WebSentiment.Classes;
 
 namespace WebSentiment
 {
@@ -22,6 +26,8 @@ namespace WebSentiment
     /// </summary>
     sealed partial class App : Application
     {
+        public const string dbName = "WebSentimentDB";
+        public static string dbPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, dbName));
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,8 +36,50 @@ namespace WebSentiment
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            DatabaseChecker();
         }
 
+        private void DatabaseChecker()
+        {
+            if (!CheckFileExists(dbName).Result)
+            {
+                using (SQLiteConnection db = new SQLiteConnection(new
+            SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), dbPath))
+                {
+                    //Create table
+                    db.CreateTable<Classes.Page>();
+                    db.CreateTable<PageOrder>();
+                    db.CreateTable<Project>();
+                    db.CreateTable<Client>();
+                    db.CreateTable<Service>();
+
+                    //Insert data in tables
+                    Classes.Page page = new Classes.Page();
+                    PageOrder pageOrder = new PageOrder();
+                    Project project = new Project();
+                    Service service = new Service();
+                    Client client = new Client();
+                    page.InsertPages(db);
+                    pageOrder.InsertPageOrders(db);
+                    project.InsertProjects(db);
+                    service.InsertServices(db);
+                    client.InsertClients(db);
+                }
+            }
+        }
+
+        private async Task<bool> CheckFileExists(string fileName)
+        {
+            try
+            {
+                await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+                return true;
+            }
+            catch
+            {
+            }
+            return false;
+        }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.

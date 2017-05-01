@@ -2,7 +2,7 @@
 using System.IO;
 namespace WebSentiment.Classes
 {
-    class DatabaseManager
+    public class DatabaseManager
     {
         private SQLite.Net.SQLiteConnection con;
         private string databaseName;
@@ -13,7 +13,7 @@ namespace WebSentiment.Classes
         }
         private void Init()
         {
-            databaseName = "db.sqlite";
+            databaseName = "WebSentimentDB";
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
             con = new SQLite.Net.SQLiteConnection(new
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);

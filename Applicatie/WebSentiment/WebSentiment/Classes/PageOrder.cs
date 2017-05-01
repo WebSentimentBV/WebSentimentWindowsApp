@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebSentiment.Classes
 {
-    class PageOrder
+    public class PageOrder
     {
         //VARIABLES
         public int pageOrderID { get; set; }
@@ -16,7 +16,13 @@ namespace WebSentiment.Classes
         public string pageTitle { get; set; }
 
         //CONSTRUCTOR
+
         public PageOrder()
+        {
+
+        }
+
+        public PageOrder(int pageOrderID, int pageID, int parentID, string pageTitle)
         {
 
         }

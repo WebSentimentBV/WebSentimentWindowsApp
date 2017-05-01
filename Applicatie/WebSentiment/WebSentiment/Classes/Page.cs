@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebSentiment.Classes
 {
-    class Page
+    public class Page
     {
         //VARIABLES
         public int pageID { get; set; }
@@ -23,9 +23,20 @@ namespace WebSentiment.Classes
 
         }
 
+        public Page(int pageID, string pageType, string pageTitle, byte[] pageImage, string pageTextOne, string pageTextTwo)
+        {
+            this.pageID = pageID;
+            this.pageType = pageType;
+            this.pageTitle = pageTitle;
+            this.pageImage = pageImage;
+            this.pageTextOne = pageTextOne;
+            this.pageTextTwo = pageTextTwo;
+        }
+
         public void InsertPages(SQLiteConnection con)
         {
-
+            byte[] imgEmpty = new byte[] { };
+            con.Insert(new Page(1, "Menu", "Home", imgEmpty, "", ""));
         }
     }
 }
