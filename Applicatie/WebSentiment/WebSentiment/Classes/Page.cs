@@ -37,6 +37,14 @@ namespace WebSentiment.Classes
         {
             byte[] imgEmpty = new byte[] { };
             con.Insert(new Page(1, "Menu", "Home", imgEmpty, "", ""));
+            con.Insert(new Page(2, "Menu", "Diensten", imgEmpty, "", ""));
+            con.Insert(new Page(3, "SliderProjects", "Projecten", imgEmpty, "", ""));
+            con.Insert(new Page(4, "Text", "Over ons", imgEmpty, "", ""));
+            con.Insert(new Page(5, "Slider", "Cliënten", imgEmpty, "", ""));
+            con.Insert(new Page(6, "Contact", "Contact", imgEmpty, "", ""));
+            con.Insert(new Page(7, "ImageText", "Website", imgEmpty, "", ""));
+            con.Insert(new Page(8, "ImageText", "E-commerce", imgEmpty, "", ""));
+            con.Insert(new Page(9, "ImageText", "Applicaties op maat", imgEmpty, "", ""));
         }
     }
 }

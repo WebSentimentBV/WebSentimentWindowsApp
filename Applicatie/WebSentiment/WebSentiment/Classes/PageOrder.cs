@@ -24,12 +24,23 @@ namespace WebSentiment.Classes
 
         public PageOrder(int pageOrderID, int pageID, int parentID, string pageTitle)
         {
-
+            this.pageOrderID = pageOrderID;
+            this.pageID = pageID;
+            this.parentID = parentID;
+            this.pageTitle = pageTitle;
         }
 
         public void InsertPageOrders(SQLiteConnection con)
         {
-
+            con.Insert(new PageOrder(1, 1, 0, "Home"));
+            con.Insert(new PageOrder(2, 2, 1, "Diensten"));
+            con.Insert(new PageOrder(3, 3, 1, "Projecten"));
+            con.Insert(new PageOrder(4, 4, 1, "Over onst"));
+            con.Insert(new PageOrder(5, 5, 1, "Cliënten"));
+            con.Insert(new PageOrder(6, 6, 1, "Contact"));
+            con.Insert(new PageOrder(7, 7, 2, "Website"));
+            con.Insert(new PageOrder(8, 8, 2, "E-commerce"));
+            con.Insert(new PageOrder(9, 9, 2, "Applicaties op maat"));
         }
 
         public void GetPageOrder()
