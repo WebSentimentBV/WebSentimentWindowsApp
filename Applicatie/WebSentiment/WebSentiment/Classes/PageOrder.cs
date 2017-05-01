@@ -46,7 +46,7 @@ namespace WebSentiment.Classes
         public void GetPageOrder()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var pageOrderQuery = "SELECT * FROM PageOrders WHERE pageOrderID = " + pageOrderID.ToString() + ";";
+            var pageOrderQuery = "SELECT * FROM PageOrder WHERE pageOrderID = " + pageOrderID.ToString() + ";";
             List<PageOrder> selectedPageOrder = con.Query<PageOrder>(pageOrderQuery);
             if (selectedPageOrder.Count > 0)
             {

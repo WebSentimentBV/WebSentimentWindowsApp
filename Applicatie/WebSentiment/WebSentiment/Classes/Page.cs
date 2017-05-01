@@ -46,5 +46,21 @@ namespace WebSentiment.Classes
             con.Insert(new Page(8, "ImageText", "E-commerce", imgEmpty, "", ""));
             con.Insert(new Page(9, "ImageText", "Applicaties op maat", imgEmpty, "", ""));
         }
+
+        public void GetPage()
+        {
+            SQLiteConnection con = new DatabaseManager().GetCon();
+            var pageQuery = "SELECT * FROM Page WHERE pageID = " + pageID.ToString() + ";";
+            List<Page> selectedPage = con.Query<Page>(pageQuery);
+            if (selectedPage.Count > 0)
+            {
+                this.pageID = selectedPage[0].pageID;
+                this.pageType = selectedPage[0].pageType;
+                this.pageTitle = selectedPage[0].pageTitle;
+                this.pageImage = selectedPage[0].pageImage;
+                this.pageTextOne = selectedPage[0].pageTextOne;
+                this.pageTextTwo = selectedPage[0].pageTextTwo;
+            }
+        }
     }
 }

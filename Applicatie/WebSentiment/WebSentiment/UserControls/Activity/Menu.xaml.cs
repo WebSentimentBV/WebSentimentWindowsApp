@@ -19,14 +19,17 @@ namespace WebSentiment.UserControls.Activity
 {
     public sealed partial class Menu : UserControl
     {
-        public Menu()
+        Page pageUserControl;
+        public Menu(Page pageUserControl)
         {
             this.InitializeComponent();
+            this.pageUserControl = pageUserControl;
             LoadButtons();
         }
 
         private void LoadButtons()
         {
+            
             Objects.Button btnFirst = new Objects.Button(1, "Test1");
             Objects.Button btnSec = new Objects.Button(1, "Test2");
             Objects.Button btnThort = new Objects.Button(1, "Test3");

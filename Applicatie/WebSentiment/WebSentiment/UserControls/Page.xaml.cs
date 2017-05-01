@@ -28,8 +28,13 @@ namespace WebSentiment.UserControls
         {
             Header.PageHeader pageHeader = new Header.PageHeader();
             spHeader.Children.Add(pageHeader);
-            Activity.Menu pageMenu = new Activity.Menu();
-            spActivity.Children.Add(pageMenu);
+            //Activity.Menu pageMenu = new Activity.Menu();
+            //spActivity.Children.Add(pageMenu);
+        }
+
+        public void LoadPage(int pageOrderID)
+        {
+
         }
     }
 }
