@@ -80,28 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\01_Kangoo_ZE.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image636228400665325432.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\02_Renault_44564_global.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Nissan-E-NV200.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\NISSAN-LEAF-REAR-VIEW2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Renault-Twizy-15.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\01_Kangoo_ZE1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\02_Renault_44564_global1.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
