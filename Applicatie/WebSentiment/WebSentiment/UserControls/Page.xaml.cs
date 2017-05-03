@@ -23,18 +23,18 @@ namespace WebSentiment.UserControls
         {
             this.InitializeComponent();
             LoadHeader();
-            LoadPage(1);
         }
         public void LoadHeader()
         {
             Header.PageHeader pageHeader = new Header.PageHeader();
             spHeader.Children.Add(pageHeader);
+            //Activity.Menu pageMenu = new Activity.Menu();
+            //spActivity.Children.Add(pageMenu);
         }
 
         public void LoadPage(int pageOrderID)
         {
-            Activity.Menu pageMenu = new Activity.Menu(this, pageOrderID);
-            spActivity.Children.Add(pageMenu);
+
         }
     }
 }

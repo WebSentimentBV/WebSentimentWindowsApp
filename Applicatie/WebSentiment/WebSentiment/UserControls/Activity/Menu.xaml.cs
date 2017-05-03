@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using WebSentiment.Classes;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -20,26 +19,27 @@ namespace WebSentiment.UserControls.Activity
 {
     public sealed partial class Menu : UserControl
     {
-        private Page pageUserControl;
-        private int pageOrderID;
-        public Menu(Page pageUserControl, int pageOrderID)
+        Page pageUserControl;
+        public Menu(Page pageUserControl)
         {
             this.InitializeComponent();
             this.pageUserControl = pageUserControl;
-            this.pageOrderID = pageOrderID;
             LoadButtons();
         }
 
         private void LoadButtons()
         {
-            PageOrder pageOrder = new PageOrder();
-            pageOrder.pageOrderID = pageOrderID;
-            foreach (PageOrder item in pageOrder.GetSubPageOrders())
-            {
-                Objects.Button btnPage = new Objects.Button(pageOrder.pageOrderID, pageOrder.pageTitle);
-                spRowOne.Children.Add(btnPage);
-            }
-
+            
+            Objects.Button btnFirst = new Objects.Button(1, "Test1");
+            Objects.Button btnSec = new Objects.Button(1, "Test2");
+            Objects.Button btnThort = new Objects.Button(1, "Test3");
+            Objects.Button btnFourth = new Objects.Button(1, "Test4");
+            Objects.Button btnFifth = new Objects.Button(1, "Test5");
+            spRowOne.Children.Add(btnFirst);
+            spRowTwo.Children.Add(btnSec);
+            spRowThree.Children.Add(btnThort);
+            spRowFour.Children.Add(btnFourth);
+            spRowFive.Children.Add(btnFifth);
         }
     }
 }
