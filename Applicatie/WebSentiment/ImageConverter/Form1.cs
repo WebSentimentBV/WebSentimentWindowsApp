@@ -50,7 +50,7 @@ namespace ImageConverter
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             var sb = new StringBuilder("new byte[] { ");
             tbOutput.Text = sb.ToString();
             //tbOutput.Text = Encoding.ASCII.GetString(ms.ToArray());
