@@ -22,6 +22,12 @@ namespace WebSentiment.UserControls.Activity
         public SliderProjects()
         {
             this.InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
+            //spNext.
         }
     }
 }

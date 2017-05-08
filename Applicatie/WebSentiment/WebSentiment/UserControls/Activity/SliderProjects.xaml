@@ -33,6 +33,6 @@
 
         <StackPanel x:Name="spPrevious" Grid.Row="1" Grid.Column="0" />
         <StackPanel x:Name="spProjectImage" Grid.Row="1" Grid.Column="1" />
-        <StackPanel x:Name="spNext" Grid.Row="1" Grid.Column="2" />
+        <Image  x:Name="imgNext" Grid.Row="1" Grid.Column="2"/>
     </Grid>
 </UserControl>
