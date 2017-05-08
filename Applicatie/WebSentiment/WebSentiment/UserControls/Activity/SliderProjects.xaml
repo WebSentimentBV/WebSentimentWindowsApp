@@ -27,12 +27,12 @@
                 <ColumnDefinition Width="50"></ColumnDefinition>
             </Grid.ColumnDefinitions>
         </Grid>
-        <StackPanel x:Name="spDekstop" Grid.Row="0" Grid.Column="1"/>
-        <StackPanel x:Name="spTablet" Grid.Row="0" Grid.Column="2" />
-        <StackPanel x:Name="spMobile" Grid.Row="0" Grid.Column="3" />
+        <StackPanel x:Name="spDekstop" Grid.Row="0" Grid.Column="0"/>
+        <StackPanel x:Name="spTablet" Grid.Row="0" Grid.Column="1" />
+        <StackPanel x:Name="spMobile" Grid.Row="0" Grid.Column="2" />
 
-        <StackPanel x:Name="spPrevious" Grid.Row="2" Grid.Column="0" />
-        <StackPanel x:Name="spProjectImage" Grid.Row="2" Grid.Column="1" />
-        <StackPanel x:Name="spNext" Grid.Row="2" Grid.Column="2" />
+        <StackPanel x:Name="spPrevious" Grid.Row="1" Grid.Column="0" />
+        <StackPanel x:Name="spProjectImage" Grid.Row="1" Grid.Column="1" />
+        <StackPanel x:Name="spNext" Grid.Row="1" Grid.Column="2" />
     </Grid>
 </UserControl>
