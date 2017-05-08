@@ -5,8 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="150"
-    d:DesignWidth="700">
+    d:DesignHeight="150">
 
     <Border Margin="1"
                 BorderBrush="{ThemeResource AppBackgroundOrange}"
@@ -14,10 +13,10 @@
                 BorderThickness="2,2,2,2"
                 CornerRadius="5,5,5,5">
 
-        <Grid x:Name="buttonGrid">
+        <Grid x:Name="buttonGrid" Tapped="buttonGrid_Tapped">
 
 
-            <TextBlock Foreground="{ThemeResource AppBackgroundWhite}" x:Name="txtPageName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="PageName" VerticalAlignment="Top" Height="92" Width="694" TextAlignment="Center" MaxLines="1" Margin="0,52,0,0"/>
+            <TextBlock Foreground="{ThemeResource AppBackgroundWhite}" x:Name="txtPageTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="PageTitle" VerticalAlignment="Top" Height="92" Width="694" TextAlignment="Center" MaxLines="1" Margin="0,52,0,0"/>
 
         </Grid>
 

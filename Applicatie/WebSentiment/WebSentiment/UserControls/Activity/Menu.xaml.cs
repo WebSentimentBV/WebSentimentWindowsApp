@@ -34,9 +34,9 @@ namespace WebSentiment.UserControls.Activity
         {
             PageOrder pageOrder = new PageOrder();
             pageOrder.pageOrderID = pageOrderID;
-            foreach (PageOrder item in pageOrder.GetSubPageOrders())
+            foreach (PageOrder pageSubItem in pageOrder.GetSubPageOrders())
             {
-                Objects.Button btnPage = new Objects.Button(pageOrder.pageOrderID, pageOrder.pageTitle);
+                Objects.Button btnPage = new Objects.Button(pageUserControl, pageSubItem.pageOrderID, pageSubItem.pageTitle);
                 if(spRowOne.Children.Count() < 1)
                 {
                     spRowOne.Children.Add(btnPage);
@@ -52,6 +52,10 @@ namespace WebSentiment.UserControls.Activity
                 else if (spRowFour.Children.Count() < 1)
                 {
                     spRowFour.Children.Add(btnPage);
+                }
+                else if (spRowFive.Children.Count() < 1)
+                {
+                    spRowFive.Children.Add(btnPage);
                 }
             }
 

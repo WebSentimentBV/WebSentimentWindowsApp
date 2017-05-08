@@ -110,6 +110,9 @@
     <Compile Include="UserControls\Activity\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Activity\SliderProjects.xaml.cs">
+      <DependentUpon>SliderProjects.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Header\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Activity\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Activity\SliderProjects.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

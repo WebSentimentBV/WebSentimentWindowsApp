@@ -20,19 +20,28 @@ namespace WebSentiment.UserControls.Objects
     public sealed partial class Button : UserControl
     {
         //PROPERTIES
-        private int categoryID;
-        private string categoryName;
+        private int pageOrderID;
+        private string pageTitle;
+        private Page pageUserControl;
         //CONSTRUCTOR
-        public Button(int categoryID, string categoryName)
+        public Button(Page pageUserControl, int pageOrderID, string pageTitle)
         {
             this.InitializeComponent();
-            this.categoryID = categoryID;
-            this.categoryName = categoryName;
+            this.pageOrderID = pageOrderID;
+            this.pageTitle = pageTitle;
+            this.pageUserControl = pageUserControl;
+            LoadButton();
         }
 
         private void LoadButton()
         {
-            txtPageName.Text = categoryName;
+            txtPageTitle.Text = pageTitle;
+        }
+
+        private void buttonGrid_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            pageUserControl.pageOrderID = pageOrderID;
+            pageUserControl.LoadPage();
         }
     }
 }
