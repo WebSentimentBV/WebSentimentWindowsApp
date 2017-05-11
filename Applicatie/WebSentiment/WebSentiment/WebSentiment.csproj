@@ -97,6 +97,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\CsvExport.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
     <Compile Include="Classes\ImageManager.cs" />
     <Compile Include="Classes\Page.cs" />
@@ -132,8 +133,14 @@
   <ItemGroup>
     <Content Include="Images\Angle-left.png" />
     <Content Include="Images\Angle-right.png" />
+    <Content Include="Images\Computer-not-selected.png" />
+    <Content Include="Images\Computer.png" />
     <Content Include="Images\Contact.png" />
     <Content Include="Images\Home.png" />
+    <Content Include="Images\Phone-not-selected.png" />
+    <Content Include="Images\Phone.png" />
+    <Content Include="Images\Tablet-not-selected.png" />
+    <Content Include="Images\Tablet.png" />
     <Content Include="Images\WebSentiment-logo-white.png" />
     <Content Include="Images\WebSentiment-logo.png" />
     <Content Include="Properties\Default.rd.xml" />

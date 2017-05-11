@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Divison.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,7 +28,16 @@ namespace WebSentiment.UserControls.Activity
 
         private void Init()
         {
-            //spNext.
+            Classes.Project project = new Classes.Project();
+            project.projectID = 1;
+            //project.
+            ImageManager imageManager = new ImageManager();
+            //imageManager.SetImage(imgProjectImage, category.categoryImage);
+        }
+
+        private void imgNext_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
         }
     }
 }
