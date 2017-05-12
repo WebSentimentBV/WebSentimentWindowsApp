@@ -97,7 +97,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Client.cs" />
-    <Compile Include="Classes\CsvExport.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
     <Compile Include="Classes\ImageManager.cs" />
     <Compile Include="Classes\Page.cs" />

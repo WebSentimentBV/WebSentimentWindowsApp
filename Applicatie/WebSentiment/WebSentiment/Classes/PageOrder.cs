@@ -62,8 +62,6 @@ namespace WebSentiment.Classes
             SQLiteConnection con = new DatabaseManager().GetCon();
             var subPageOrdersQuery = "SELECT * FROM PageOrder WHERE parentID = " + pageOrderID.ToString() + ";";
             List<PageOrder> subPageOrders = con.Query<PageOrder>(subPageOrdersQuery);
-            //var csv = new Classes.CsvExport<PageOrder>(subPageOrders);
-            //csv.ExportToFile("myexportresult.csv");
             return subPageOrders;
         }
     }

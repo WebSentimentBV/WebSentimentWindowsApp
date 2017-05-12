@@ -26,7 +26,7 @@ namespace WebSentiment
     /// </summary>
     sealed partial class App : Application
     {
-        public const string dbName = "WebSentimentDB";
+        public const string dbName = "WebSentimentDB.sqlite";
         public static string dbPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, dbName));
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code

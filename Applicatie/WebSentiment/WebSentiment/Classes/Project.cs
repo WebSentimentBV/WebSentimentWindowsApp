@@ -31,6 +31,21 @@ namespace WebSentiment.Classes
             this.projectImageThree = projectImageThree;
         }
 
+        public void GetProject()
+        {
+            SQLiteConnection con = new DatabaseManager().GetCon();
+            var projectQuery = "SELECT * FROM Project WHERE projectID = " + projectID.ToString() + ";";
+            List<Project> selectedProject = con.Query<Project>(projectQuery);
+            if (selectedProject.Count > 0)
+            {
+                this.projectID = selectedProject[0].projectID;
+                this.projectName = selectedProject[0].projectName;
+                this.projectImageOne = selectedProject[0].projectImageOne;
+                this.projectImageTwo = selectedProject[0].projectImageTwo;
+                this.projectImageThree = selectedProject[0].projectImageThree;
+            }
+        }
+
         public void InsertProjects(SQLiteConnection con)
         {
             //telefoon

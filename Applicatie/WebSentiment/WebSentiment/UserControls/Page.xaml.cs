@@ -59,6 +59,8 @@ namespace WebSentiment.UserControls
                     }
                 case "SliderProjects":
                     {
+                        Activity.SliderProjects pageSliderProjects = new Activity.SliderProjects();
+                        spActivity.Children.Add(pageSliderProjects);
                         break;
                     }
                 default:
