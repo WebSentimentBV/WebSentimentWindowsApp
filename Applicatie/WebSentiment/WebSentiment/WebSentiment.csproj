@@ -113,6 +113,9 @@
     <Compile Include="UserControls\Activity\SliderProjects.xaml.cs">
       <DependentUpon>SliderProjects.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Activity\Text.xaml.cs">
+      <DependentUpon>Text.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Header\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Activity\SliderProjects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Activity\Text.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

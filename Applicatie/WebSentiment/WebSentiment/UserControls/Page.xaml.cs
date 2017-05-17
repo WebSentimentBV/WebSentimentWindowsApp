@@ -63,6 +63,12 @@ namespace WebSentiment.UserControls
                         spActivity.Children.Add(pageSliderProjects);
                         break;
                     }
+                case "Text":
+                    {
+                        Activity.Text pageText = new Activity.Text(page);
+                        spActivity.Children.Add(pageText);
+                        break;
+                    }
                 default:
                     {
                         break;

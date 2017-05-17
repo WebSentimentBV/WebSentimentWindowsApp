@@ -39,7 +39,7 @@ namespace WebSentiment.Classes
             con.Insert(new Page(1, "Menu", "Home", imgEmpty, "", ""));
             con.Insert(new Page(2, "Menu", "Diensten", imgEmpty, "", ""));
             con.Insert(new Page(3, "SliderProjects", "Projecten", imgEmpty, "", ""));
-            con.Insert(new Page(4, "Text", "Over ons", imgEmpty, "", ""));
+            con.Insert(new Page(4, "Text", "Over ons", imgEmpty, "Het bedrijf is gespecialiseerd in het maken en onderhouden van simpele tot complexe webapplicaties. Naast de technische ontwikkeling doen we ook de online marketing zoals SEO, SEA en Social Media marketing.", ""));
             con.Insert(new Page(5, "Slider", "Cliënten", imgEmpty, "", ""));
             con.Insert(new Page(6, "Contact", "Contact", imgEmpty, "", ""));
             con.Insert(new Page(7, "ImageText", "Website", imgEmpty, "", ""));
