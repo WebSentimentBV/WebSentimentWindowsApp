@@ -69,6 +69,10 @@ namespace WebSentiment.UserControls
                         spActivity.Children.Add(pageText);
                         break;
                     }
+                case "Slider":
+                    {
+                        break;
+                    }
                 default:
                     {
                         break;
