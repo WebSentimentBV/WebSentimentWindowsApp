@@ -42,7 +42,7 @@ namespace WebSentiment.UserControls.Activity
                 case "Dekstop":
                     {
                         //Select Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Computer.png", UriKind.Absolute));
+                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop.png", UriKind.Absolute));
                         //Deselect Tablet image.
                         imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
                         //Deselect Phone image.
@@ -54,7 +54,7 @@ namespace WebSentiment.UserControls.Activity
                 case "Tablet":
                     {
                         //Deselect Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Computer-not-selected.png", UriKind.Absolute));
+                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
                         //Select Tablet image.
                         imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet.png", UriKind.Absolute));
                         //Deselect Phone image.
@@ -66,7 +66,7 @@ namespace WebSentiment.UserControls.Activity
                 case "Phone":
                     {
                         //Deselect Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Computer-not-selected.png", UriKind.Absolute));
+                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
                         //Deselect Tablet image.
                         imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
                         //Select Phone image.

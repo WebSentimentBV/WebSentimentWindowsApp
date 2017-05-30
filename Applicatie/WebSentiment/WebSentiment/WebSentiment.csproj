@@ -99,6 +99,7 @@
     <Compile Include="Classes\Client.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
     <Compile Include="Classes\ImageManager.cs" />
+    <Compile Include="Classes\MailManager.cs" />
     <Compile Include="Classes\Page.cs" />
     <Compile Include="Classes\PageOrder.cs" />
     <Compile Include="Classes\Project.cs" />
@@ -106,6 +107,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Activity\Contact.xaml.cs">
+      <DependentUpon>Contact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Activity\ImageText.xaml.cs">
+      <DependentUpon>ImageText.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Activity\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -135,16 +142,16 @@
     <None Include="WebSentiment_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Angle-left.png" />
     <Content Include="Images\Angle-right.png" />
-    <Content Include="Images\Computer-not-selected.png" />
-    <Content Include="Images\Computer.png" />
-    <Content Include="Images\Contact.png" />
-    <Content Include="Images\Home.png" />
+    <Content Include="Images\Angle-left.png" />
+    <Content Include="Images\Tablet-not-selected.png" />
+    <Content Include="Images\Dekstop-not-selected.png" />
     <Content Include="Images\Phone-not-selected.png" />
     <Content Include="Images\Phone.png" />
-    <Content Include="Images\Tablet-not-selected.png" />
     <Content Include="Images\Tablet.png" />
+    <Content Include="Images\Contact.png" />
+    <Content Include="Images\Dekstop.png" />
+    <Content Include="Images\Home.png" />
     <Content Include="Images\WebSentiment-logo-white.png" />
     <Content Include="Images\WebSentiment-logo.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -169,6 +176,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Activity\Contact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Activity\ImageText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Activity\Menu.xaml">
       <SubType>Designer</SubType>

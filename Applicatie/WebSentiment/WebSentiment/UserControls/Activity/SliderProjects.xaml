@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="85"></ColumnDefinition>
                 <ColumnDefinition Width="50"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Image x:Name="imgDekstop" Tapped="imgDekstop_Tapped" Grid.Row="0" Grid.Column="1" Source="ms-appx:///Images/Computer.png"/>
+            <Image x:Name="imgDekstop" Tapped="imgDekstop_Tapped" Grid.Row="0" Grid.Column="1" Source="ms-appx:///Images/Dekstop.png"/>
             <Image x:Name="imgTablet" Tapped="imgTablet_Tapped" Grid.Row="0" Grid.Column="2" Source="ms-appx:///Images/Tablet-not-selected.png" />
             <Image x:Name="imgPhone" Tapped="imgPhone_Tapped" Grid.Row="0" Grid.Column="3" Source="ms-appx:///Images/Phone-not-selected.png"  />
         </Grid>

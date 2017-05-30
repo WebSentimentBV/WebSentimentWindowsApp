@@ -75,6 +75,18 @@ namespace WebSentiment.UserControls
                         spActivity.Children.Add(pageSlider);
                         break;
                     }
+                case "ImageText":
+                    {
+                        Activity.ImageText pageImageText = new Activity.ImageText(page);
+                        spActivity.Children.Add(pageImageText);
+                        break;
+                    }
+                case "Contact":
+                    {
+                        Activity.Contact pageContact = new Activity.Contact(page);
+                        spActivity.Children.Add(pageContact);
+                        break;
+                    }
                 default:
                     {
                         break;
