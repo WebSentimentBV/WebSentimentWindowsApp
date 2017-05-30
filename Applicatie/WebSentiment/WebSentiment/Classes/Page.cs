@@ -33,20 +33,6 @@ namespace WebSentiment.Classes
             this.pageTextTwo = pageTextTwo;
         }
 
-        public void InsertPages(SQLiteConnection con)
-        {
-            byte[] imgEmpty = new byte[] { };
-            con.Insert(new Page(1, "Menu", "Home", imgEmpty, "", ""));
-            con.Insert(new Page(2, "Menu", "Diensten", imgEmpty, "Wat websentiment voor u kan betekenen", ""));
-            con.Insert(new Page(3, "SliderProjects", "Projecten", imgEmpty, "", ""));
-            con.Insert(new Page(4, "Text", "Over ons", imgEmpty, "Het bedrijf is gespecialiseerd in het maken en onderhouden van simpele tot complexe webapplicaties. Naast de technische ontwikkeling doen we ook de online marketing zoals SEO, SEA en Social Media marketing.", ""));
-            con.Insert(new Page(5, "Slider", "Cliënten", imgEmpty, "Een aantal van onze tevreden cliënten", ""));
-            con.Insert(new Page(6, "Contact", "Contact", imgEmpty, "Nieuwsgierig?\n\nLets work together.", ""));
-            con.Insert(new Page(7, "ImageText", "Website", imgEmpty, "", ""));
-            con.Insert(new Page(8, "ImageText", "E-commerce", imgEmpty, "", ""));
-            con.Insert(new Page(9, "ImageText", "Applicaties op maat", imgEmpty, "", ""));
-        }
-
         public void GetPage()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();

@@ -26,8 +26,6 @@ namespace WebSentiment
     /// </summary>
     sealed partial class App : Application
     {
-        public const string dbName = "WebSentimentDB.sqlite";
-        public static string dbPath = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, dbName));
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -36,49 +34,6 @@ namespace WebSentiment
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            DatabaseChecker();
-        }
-
-        private void DatabaseChecker()
-        {
-            if (!CheckFileExists(dbName).Result)
-            {
-                using (SQLiteConnection db = new SQLiteConnection(new
-            SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), dbPath))
-                {
-                    //Create table
-                    db.CreateTable<Classes.Page>();
-                    db.CreateTable<PageOrder>();
-                    db.CreateTable<Project>();
-                    db.CreateTable<Client>();
-                    db.CreateTable<Service>();
-
-                    //Insert data in tables
-                    Classes.Page page = new Classes.Page();
-                    PageOrder pageOrder = new PageOrder();
-                    Project project = new Project();
-                    Service service = new Service();
-                    Client client = new Client();
-                    page.InsertPages(db);
-                    pageOrder.InsertPageOrders(db);
-                    project.InsertProjects(db);
-                    service.InsertServices(db);
-                    client.InsertClients(db);
-                }
-            }
-        }
-
-        private async Task<bool> CheckFileExists(string fileName)
-        {
-            try
-            {
-                await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
-                return true;
-            }
-            catch
-            {
-            }
-            return false;
         }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

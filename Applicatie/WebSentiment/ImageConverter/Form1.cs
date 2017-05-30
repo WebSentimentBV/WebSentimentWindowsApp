@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,8 +94,11 @@ namespace ImageConverter
                 if (openFileDialog1.FileName.Contains(".png") || openFileDialog1.FileName.Contains(".jpg"))
                 {
                     pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
-                    imageToByteArray(pictureBox1.Image);
-
+                    //imageToByteArray(pictureBox1.Image);
+                   tbOutput.Text = new SoapHexBinary(File.ReadAllBytes(openFileDialog1.FileName)).ToString();
+                    Clipboard.SetText(new SoapHexBinary(File.ReadAllBytes(openFileDialog1.FileName)).ToString());
+                    tbOutput.SelectAll();
+                    tbOutput.Focus();
                 }
                 else
                 {

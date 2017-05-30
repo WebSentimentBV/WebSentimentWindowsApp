@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace E_Divison.Classes
+namespace WebSentiment.Classes
 {
     public class ImageManager
     {

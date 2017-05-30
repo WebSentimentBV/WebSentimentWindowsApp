@@ -71,6 +71,8 @@ namespace WebSentiment.UserControls
                     }
                 case "Slider":
                     {
+                        Activity.Slider pageSlider = new Activity.Slider();
+                        spActivity.Children.Add(pageSlider);
                         break;
                     }
                 default:

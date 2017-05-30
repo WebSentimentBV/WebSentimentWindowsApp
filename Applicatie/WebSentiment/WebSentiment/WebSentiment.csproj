@@ -102,7 +102,6 @@
     <Compile Include="Classes\Page.cs" />
     <Compile Include="Classes\PageOrder.cs" />
     <Compile Include="Classes\Project.cs" />
-    <Compile Include="Classes\Service.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
