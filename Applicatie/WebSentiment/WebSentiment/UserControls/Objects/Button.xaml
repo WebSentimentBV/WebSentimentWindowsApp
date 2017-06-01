@@ -4,19 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="150">
+    mc:Ignorable="d">
 
     <Border Margin="1"
                 BorderBrush="{ThemeResource AppBackgroundOrange}"
                 Background="{ThemeResource AppBackgroundOrange}"
                 BorderThickness="2,2,2,2"
-                CornerRadius="5,5,5,5">
+                CornerRadius="5,5,5,5"
+           Height="80">
 
         <Grid x:Name="buttonGrid" Tapped="buttonGrid_Tapped">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Foreground="{ThemeResource AppBackgroundWhite}" x:Name="txtPageTitle" TextWrapping="Wrap" Text="PageTitle" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1"/>
+            </Grid>
 
 
-            <TextBlock Foreground="{ThemeResource AppBackgroundWhite}" x:Name="txtPageTitle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="PageTitle" VerticalAlignment="Top" Height="92" Width="694" TextAlignment="Center" MaxLines="1" Margin="0,52,0,0"/>
 
         </Grid>
 

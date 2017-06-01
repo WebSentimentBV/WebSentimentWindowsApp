@@ -1,3 +1,6 @@
+wat er nodig was: REFERENCES -> SQLITE3 en ook VISUAL C++ 2015
+Vervolgens ook nog is met nuget sqlite uitvoeren
+
 3.De database gebouwd (screenshot van gemaakte db)
 
 

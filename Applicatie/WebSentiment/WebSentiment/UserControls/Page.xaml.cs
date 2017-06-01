@@ -38,6 +38,21 @@ namespace WebSentiment.UserControls
             Header.PageHeader pageHeader = new Header.PageHeader();
             spHeader.Children.Add(pageHeader);
         }
+        private void App_BackRequested(object sender,
+   Windows.UI.Core.BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if (rootFrame == null)
+                return;
+
+            // Navigate back if possible, and if the event has not 
+            // already been handled .
+            if (rootFrame.CanGoBack && e.Handled == false)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
+        }
 
         public void LoadActivity()
         {
@@ -55,12 +70,17 @@ namespace WebSentiment.UserControls
                     {
                         Activity.Menu pageMenu = new Activity.Menu(this, pageOrderID);
                         spActivity.Children.Add(pageMenu);
+                        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
+App_BackRequested;
                         break;
                     }
                 case "SliderProjects":
                     {
                         Activity.SliderProjects pageSliderProjects = new Activity.SliderProjects();
                         spActivity.Children.Add(pageSliderProjects);
+                        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested +=
+App_BackRequested;
+
                         break;
                     }
                 case "Text":

@@ -13,7 +13,7 @@ namespace WebSentiment.Classes
         }
         private void Init()
         {
-            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
+            path = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Data", databaseName);
             con = new SQLite.Net.SQLiteConnection(new
             SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
         }
