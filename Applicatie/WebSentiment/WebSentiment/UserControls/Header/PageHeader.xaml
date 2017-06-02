@@ -5,9 +5,7 @@
     xmlns:local="using:WebSentiment.UserControls.Header"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="280"
-    d:DesignWidth="768">
+    mc:Ignorable="d">
 
     <Grid Background="{ThemeResource AppBackgroundGrey}">
         <Grid.ColumnDefinitions>
@@ -15,9 +13,9 @@
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="imgHome" Grid.Column="0" HorizontalAlignment="Left" Height="280" VerticalAlignment="Top" Width="192"/>
-        <TextBlock x:Name="lblPageName" Grid.Column="1" Foreground="{ThemeResource AppBackgroundWhite}"  HorizontalAlignment="Left" TextWrapping="Wrap" Text="WebSentiment" VerticalAlignment="Top" Height="280" Width="384" TextAlignment="Center"/>
-        <Image x:Name="imgContact" Grid.Column="2" HorizontalAlignment="Right" Height="280" VerticalAlignment="Top" Width="192"/>
+        <Image x:Name="imgHome"  Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="lblPageName" Grid.Column="1" Foreground="{ThemeResource AppBackgroundWhite}" TextWrapping="Wrap" Text="WebSentiment" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center"/>
+        <Image x:Name="imgContact" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
     </Grid>
 </UserControl>

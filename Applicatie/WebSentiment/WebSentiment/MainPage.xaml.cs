@@ -30,7 +30,7 @@ namespace WebSentiment
         public void LoadPage()
         {
             UserControls.Page page = new UserControls.Page();
-            spPage.Children.Add(page);
+            Window.Current.Content = page;
         }
     }
 }

@@ -8,10 +8,13 @@
     mc:Ignorable="d"
     >
 
-    <Grid>
-        <StackPanel x:Name="spPage">
-            <StackPanel x:Name="spHeader" Height="100"></StackPanel>
-            <StackPanel x:Name="spActivity" Height="650"></StackPanel>
-        </StackPanel>
-    </Grid>
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="6*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="spHeader" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"></StackPanel>
+                <StackPanel x:Name="spActivity" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"></StackPanel>
+            </Grid>
+            
 </UserControl>
