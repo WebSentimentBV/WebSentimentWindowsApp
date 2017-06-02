@@ -98,12 +98,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\C_Regel.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
     <Compile Include="Classes\ImageManager.cs" />
     <Compile Include="Classes\MailManager.cs" />
     <Compile Include="Classes\Page.cs" />
-    <Compile Include="Classes\PageOrder.cs" />
+    <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\Project.cs" />
+    <Compile Include="Classes\P_Regel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

@@ -67,8 +67,8 @@ namespace WebSentiment.UserControls
         public void LoadActivity()
         {
             
-            PageOrder pageOrder = new PageOrder();
-            pageOrder.pageOrderID = pageOrderID;
+            Category pageOrder = new Category();
+            pageOrder.categoryID = pageOrderID;
             pageOrder.GetPageOrder();
             Classes.Page page = new Classes.Page();
             page.pageID = pageOrder.pageID;

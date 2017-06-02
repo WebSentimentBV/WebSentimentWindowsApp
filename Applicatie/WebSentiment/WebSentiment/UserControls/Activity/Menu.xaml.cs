@@ -32,11 +32,11 @@ namespace WebSentiment.UserControls.Activity
 
         private void LoadButtons()
         {
-            PageOrder pageOrder = new PageOrder();
-            pageOrder.pageOrderID = pageOrderID;
-            foreach (PageOrder pageSubItem in pageOrder.GetSubPageOrders())
+            Category pageOrder = new Category();
+            pageOrder.categoryID = pageOrderID;
+            foreach (Category pageSubItem in pageOrder.GetSubPageOrders())
             {
-                Objects.Button btnPage = new Objects.Button(pageUserControl, pageSubItem.pageOrderID, pageSubItem.pageTitle);
+                Objects.Button btnPage = new Objects.Button(pageUserControl, pageSubItem.categoryID, pageSubItem.categoryTitle);
                 if(spRowOne.Children.Count() < 1)
                 {
                     spRowOne.Children.Add(btnPage);
