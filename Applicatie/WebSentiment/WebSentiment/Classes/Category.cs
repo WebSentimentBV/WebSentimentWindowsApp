@@ -12,31 +12,32 @@ namespace WebSentiment.Classes
         //VARIABLES
         public int categoryID { get; set; }
         public string categoryTitle { get; set; }
+        public int pageID { get; set; }
+        public int parentID { get; set; }
+
 
         //CONSTRUCTOR
         public Category()
         {
-
         }
 
-        public void GetCategoryName()
+        public void GetCategory()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var categoryQuery = "SELECT categoryTitle FROM tbl_Categories WHERE categoryID = " + categoryID.ToString() + ";";
+            var categoryQuery = "SELECT * FROM Tbl_Categories INNER JOIN Tbl_P_Regels ON Tbl_Categories.CategoryID = Tbl_P_Regels.CategoryID WHERE Tbl_Categories.categoryID = " + categoryID.ToString() + ";";
             List<Category> selectedCategory = con.Query<Category>(categoryQuery);
             if (selectedCategory.Count > 0)
             {
-                this.categoryID = selectedCategory[0].categoryID;
+                this.pageID = selectedCategory[0].pageID;
                 this.categoryTitle = selectedCategory[0].categoryTitle;
             }
         }
 
-        public Object GetSubCategories()
+        public List<Category> GetSubCategories()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var subCategoriesQuery = "SELECT * FROM tbl_C_Regels INNER JOIN tbl_Categories WHERE categoryID = " + categoryID.ToString() + " WHERE parentID = " + categoryID.ToString() + ";";
-            
-            var subCategories = con.Query<C_Regel>(subCategoriesQuery);
+            var subCategoriesQuery = "SELECT * FROM tbl_C_Regels INNER JOIN tbl_Categories ON tbl_C_Regels.categoryID = tbl_Categories.categoryID  WHERE parentID = " + categoryID.ToString() + "; ";
+            List<Category> subCategories = con.Query<Category>(subCategoriesQuery);
             return subCategories;
         }
     }

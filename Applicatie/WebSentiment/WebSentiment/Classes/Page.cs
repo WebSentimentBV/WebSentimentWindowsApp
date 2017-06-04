@@ -36,7 +36,7 @@ namespace WebSentiment.Classes
         public void GetPage()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var pageQuery = "SELECT * FROM Page WHERE pageID = " + pageID.ToString() + ";";
+            string pageQuery = "SELECT * FROM tbl_Pages WHERE pageID = " + pageID.ToString() + ";";
             List<Page> selectedPage = con.Query<Page>(pageQuery);
             if (selectedPage.Count > 0)
             {

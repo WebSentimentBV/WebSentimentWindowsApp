@@ -34,7 +34,7 @@ namespace WebSentiment.Classes
         public void GetProject()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var projectQuery = "SELECT * FROM Project WHERE projectID = " + projectID.ToString() + ";";
+            var projectQuery = "SELECT * FROM tbl_Projects WHERE projectID = " + projectID.ToString() + ";";
             List<Project> selectedProject = con.Query<Project>(projectQuery);
             if (selectedProject.Count > 0)
             {

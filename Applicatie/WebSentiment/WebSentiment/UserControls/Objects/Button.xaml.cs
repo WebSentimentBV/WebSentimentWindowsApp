@@ -20,14 +20,14 @@ namespace WebSentiment.UserControls.Objects
     public sealed partial class Button : UserControl
     {
         //PROPERTIES
-        private int pageOrderID;
+        private int categoryID;
         private string pageTitle;
         private Page pageUserControl;
         //CONSTRUCTOR
-        public Button(Page pageUserControl, int pageOrderID, string pageTitle)
+        public Button(Page pageUserControl, int categoryID, string pageTitle)
         {
             this.InitializeComponent();
-            this.pageOrderID = pageOrderID;
+            this.categoryID = categoryID;
             this.pageTitle = pageTitle;
             this.pageUserControl = pageUserControl;
             LoadButton();
@@ -40,7 +40,7 @@ namespace WebSentiment.UserControls.Objects
 
         private void buttonGrid_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            pageUserControl.pageOrderID = pageOrderID;
+            pageUserControl.category.categoryID = categoryID;
             pageUserControl.LoadPage();
         }
     }

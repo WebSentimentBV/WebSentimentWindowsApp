@@ -31,7 +31,7 @@ namespace WebSentiment.Classes
         public List<Client> GetClients()
         {
             SQLiteConnection con = new DatabaseManager().GetCon();
-            var clientsQuery = "SELECT * FROM Client;";
+            var clientsQuery = "SELECT * FROM Tbl_Clients;";
             List<Client> listOfClients = con.Query<Client>(clientsQuery);
             return listOfClients;
         }

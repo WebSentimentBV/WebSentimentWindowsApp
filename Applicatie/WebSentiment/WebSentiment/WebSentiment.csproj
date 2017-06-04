@@ -98,14 +98,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Client.cs" />
-    <Compile Include="Classes\C_Regel.cs" />
     <Compile Include="Classes\DatabaseManager.cs" />
     <Compile Include="Classes\ImageManager.cs" />
     <Compile Include="Classes\MailManager.cs" />
     <Compile Include="Classes\Page.cs" />
     <Compile Include="Classes\Category.cs" />
     <Compile Include="Classes\Project.cs" />
-    <Compile Include="Classes\P_Regel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -147,16 +145,16 @@
   <ItemGroup>
     <Content Include="Images\Angle-right.png" />
     <Content Include="Images\Angle-left.png" />
+    <Content Include="Images\Contact.png" />
     <Content Include="Images\Tablet-not-selected.png" />
     <Content Include="Images\Dekstop-not-selected.png" />
     <Content Include="Images\Phone-not-selected.png" />
     <Content Include="Images\Phone.png" />
     <Content Include="Images\Tablet.png" />
-    <Content Include="Images\Contact.png" />
     <Content Include="Images\Dekstop.png" />
     <Content Include="Images\Home.png" />
-    <Content Include="Images\WebSentiment-logo-white.png" />
-    <Content Include="Images\WebSentiment-logo.png" />
+    <Content Include="Images\WebSentiment-logo-icon.png" />
+    <Content Include="Images\WebSentiment-logo-text.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

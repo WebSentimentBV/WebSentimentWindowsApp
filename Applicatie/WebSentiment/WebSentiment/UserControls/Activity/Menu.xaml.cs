@@ -21,27 +21,25 @@ namespace WebSentiment.UserControls.Activity
     public sealed partial class Menu : UserControl
     {
         private Page pageUserControl;
-        private int pageOrderID;
-        public Menu(Page pageUserControl, int pageOrderID)
+        public Menu(Page pageUserControl)
         {
             this.InitializeComponent();
             this.pageUserControl = pageUserControl;
-            this.pageOrderID = pageOrderID;
             LoadButtons();
         }
 
         private void LoadButtons()
         {
-            Category pageOrder = new Category();
-            pageOrder.categoryID = pageOrderID;
-            foreach (Category pageSubItem in pageOrder.GetSubPageOrders())
+            Category category = new Category();
+            category.categoryID = pageUserControl.category.categoryID;
+            foreach (Category pageSubItem in category.GetSubCategories())
             {
                 Objects.Button btnPage = new Objects.Button(pageUserControl, pageSubItem.categoryID, pageSubItem.categoryTitle);
-                if(spRowOne.Children.Count() < 1)
+                if (spRowOne.Children.Count() < 1)
                 {
                     spRowOne.Children.Add(btnPage);
                 }
-                else if(spRowTwo.Children.Count() < 1)
+                else if (spRowTwo.Children.Count() < 1)
                 {
                     spRowTwo.Children.Add(btnPage);
                 }
@@ -58,7 +56,6 @@ namespace WebSentiment.UserControls.Activity
                     spRowFive.Children.Add(btnPage);
                 }
             }
-
         }
     }
 }

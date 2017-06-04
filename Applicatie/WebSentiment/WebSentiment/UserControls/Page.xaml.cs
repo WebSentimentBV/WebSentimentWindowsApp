@@ -22,11 +22,15 @@ namespace WebSentiment.UserControls
 {
     public sealed partial class Page : UserControl
     {
-        public int pageOrderID { get; set; }
+
+        public Category category { get; set; }
+        public Classes.Page page { get; set; }
         public Page()
         {
             this.InitializeComponent();
-            pageOrderID = 1;
+            category = new Category();
+            page = new Classes.Page();
+            category.categoryID = 1;
             LoadPage();
            
         }
@@ -45,9 +49,13 @@ namespace WebSentiment.UserControls
         }
         public void LoadPage()
         {
+            category.GetCategory();
+            page.pageID = category.pageID;
+            page.GetPage();
+
             LoadHeader();
             LoadActivity();
-            if(pageOrderID != 0)
+            if(category.categoryID != 1)
             {
                 ShowBackbutton(true);
             }
@@ -60,25 +68,20 @@ namespace WebSentiment.UserControls
         public void LoadHeader()
         {
             spHeader.Children.Clear();
-            Header.PageHeader pageHeader = new Header.PageHeader();
+            Header.PageHeader pageHeader = new Header.PageHeader(this, category, page);
             spHeader.Children.Add(pageHeader);
         }
 
         public void LoadActivity()
         {
             
-            Category pageOrder = new Category();
-            pageOrder.categoryID = pageOrderID;
-            pageOrder.GetPageOrder();
-            Classes.Page page = new Classes.Page();
-            page.pageID = pageOrder.pageID;
-            page.GetPage();
+           
             spActivity.Children.Clear();
             switch (page.pageType)
             {
                 case "Menu":
                     {
-                        Activity.Menu pageMenu = new Activity.Menu(this, pageOrderID);
+                        Activity.Menu pageMenu = new Activity.Menu(this);
                         spActivity.Children.Add(pageMenu);
                         break;
                     }
