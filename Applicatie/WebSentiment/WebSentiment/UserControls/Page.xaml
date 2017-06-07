@@ -10,8 +10,8 @@
 
         <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height=".1*"></RowDefinition>
+                    <RowDefinition Height=".9*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <StackPanel x:Name="spHeader" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"></StackPanel>
                 <StackPanel x:Name="spActivity" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"></StackPanel>

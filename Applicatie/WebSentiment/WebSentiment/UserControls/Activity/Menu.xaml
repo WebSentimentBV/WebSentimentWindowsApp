@@ -8,16 +8,27 @@
 
     <Grid Background="{ThemeResource AppBackgroundWhite}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
         </Grid.RowDefinitions>
-        <StackPanel x:Name="spRowOne" Grid.Row="0" />
-        <StackPanel x:Name="spRowTwo" Grid.Row="1" />
-        <StackPanel x:Name="spRowThree" Grid.Row="2" />
-        <StackPanel x:Name="spRowFour" Grid.Row="3" />
-        <StackPanel x:Name="spRowFive" Grid.Row="4" />
+        <StackPanel Margin="20 7" x:Name="spRowOne"  Grid.Row="1" />
+        <StackPanel Margin="20 7" x:Name="spRowTwo" Grid.Row="3" />
+        <StackPanel Margin="20 7" x:Name="spRowThree" Grid.Row="5" />
+        <StackPanel Margin="20 7" x:Name="spRowFour" Grid.Row="7" />
+        <StackPanel Margin="20 7" x:Name="spRowFive" Grid.Row="9" />
     </Grid>
 </UserControl>

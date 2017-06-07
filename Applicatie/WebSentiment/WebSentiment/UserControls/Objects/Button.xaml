@@ -4,16 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Height="80"
+     >
 
     <Border Margin="1"
                 BorderBrush="{ThemeResource AppBackgroundOrange}"
-                Background="{ThemeResource AppBackgroundOrange}"
-                BorderThickness="2,2,2,2"
-                CornerRadius="5,5,5,5"
-           Height="80">
 
-        <Grid x:Name="buttonGrid" Tapped="buttonGrid_Tapped">
+                BorderThickness="2,2,2,2"
+                CornerRadius="5,5,5,5">
+
+        <Grid Background="{ThemeResource AppBackgroundOrange}" x:Name="buttonGrid" Tapped="buttonGrid_Tapped">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -27,10 +28,6 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Foreground="{ThemeResource AppBackgroundWhite}" x:Name="txtPageTitle" TextWrapping="Wrap" Text="PageTitle" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1"/>
             </Grid>
-
-
-
         </Grid>
-
     </Border>
 </UserControl>

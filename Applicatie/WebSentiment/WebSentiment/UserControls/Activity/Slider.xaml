@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource AppBackgroundWhite}">
+    <Grid Margin="0 100"  Background="{ThemeResource AppBackgroundWhite}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55"></ColumnDefinition>
-            <ColumnDefinition Width="250"></ColumnDefinition>
-            <ColumnDefinition Width="55"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
