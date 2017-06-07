@@ -25,14 +25,22 @@ namespace WebSentiment.UserControls
 
         public Category category { get; set; }
         public Classes.Page page { get; set; }
+        List<int> pageHistoryList;
         public Page()
         {
             this.InitializeComponent();
             category = new Category();
             page = new Classes.Page();
+            pageHistoryList = new List<int>();
             category.categoryID = 1;
-            LoadPage();
-           
+            //pageHistoryList.Add(category.categoryID);
+            LoadPage(category.categoryID);
+            SystemNavigationManager.GetForCurrentView().BackRequested += (s, e) =>
+            {
+                pageHistoryList.Remove(pageHistoryList.Last());
+                LoadPage(pageHistoryList.Count);
+                pageHistoryList.Remove(pageHistoryList.Last());
+            };
         }
 
         public void ShowBackbutton(bool bShowBackButton)
@@ -40,6 +48,7 @@ namespace WebSentiment.UserControls
             if(bShowBackButton)
             {
                 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+               
             }
             else
             {
@@ -47,8 +56,10 @@ namespace WebSentiment.UserControls
             }
            
         }
-        public void LoadPage()
+        public void LoadPage(int categoryID)
         {
+                pageHistoryList.Add(category.categoryID);
+            category.categoryID = categoryID;
             category.GetCategory();
             page.pageID = category.pageID;
             page.GetPage();
@@ -63,6 +74,7 @@ namespace WebSentiment.UserControls
             {
                 ShowBackbutton(false);
             }
+           
         }
 
         public void LoadHeader()
@@ -74,8 +86,6 @@ namespace WebSentiment.UserControls
 
         public void LoadActivity()
         {
-            
-           
             spActivity.Children.Clear();
             switch (page.pageType)
             {

@@ -14,9 +14,14 @@ namespace WebSentiment.Classes
         private void Init()
         {
             //path = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Data", databaseName);
-            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
+            //path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
+            path = Path.Combine(Path.GetTempPath(), databaseName);
+
+
+            //File.Copy(path, Path.Combine(Path.GetTempPath(), "WebSentimentDB.sqlite"));
+            //path = Path.Combine(Path.GetTempPath(), "WebSentimentDB.sqlite");
             con = new SQLite.Net.SQLiteConnection(new
-            SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+           SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
         }
 
         public SQLiteConnection GetCon()

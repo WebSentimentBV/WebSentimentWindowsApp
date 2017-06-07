@@ -40,8 +40,7 @@ namespace WebSentiment.UserControls.Objects
 
         private void buttonGrid_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            pageUserControl.category.categoryID = categoryID;
-            pageUserControl.LoadPage();
+            pageUserControl.LoadPage(categoryID);
         }
     }
 }

@@ -34,6 +34,24 @@ namespace WebSentiment
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            DBCheck();
+        }
+
+        private void DBCheck()
+        {
+            string databaseName = "WebSentimentDB.sqlite";
+            string path = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Data", databaseName);
+            //path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
+
+            string newPath = Path.Combine(Path.GetTempPath(), databaseName);
+
+
+            if (!(File.Exists(newPath)))
+            {
+                //FileInfo fi = new FileInfo(path);
+                //fi.CopyTo(newPath, true);
+                File.Copy(path, newPath);
+            }
         }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

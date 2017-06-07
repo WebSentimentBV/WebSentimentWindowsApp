@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using WebSentiment.Classes;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Core;
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace WebSentiment.UserControls.Header
@@ -49,8 +50,7 @@ namespace WebSentiment.UserControls.Header
         {
             if (category.categoryID != 1)
             {
-                pageUserControl.category.categoryID = 1;
-                pageUserControl.LoadPage();
+                pageUserControl.LoadPage(1);
             }
         }
 
@@ -58,8 +58,7 @@ namespace WebSentiment.UserControls.Header
         {
             if (category.categoryID != 6)
             {
-                pageUserControl.category.categoryID = 6;
-                pageUserControl.LoadPage();
+                pageUserControl.LoadPage(6);
             }
         }
     }
