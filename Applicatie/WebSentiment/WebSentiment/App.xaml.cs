@@ -46,8 +46,6 @@ namespace WebSentiment
 
             if (!(File.Exists(newPath)))
             {
-                //FileInfo fi = new FileInfo(path);
-                //fi.CopyTo(newPath, true);
                 File.Copy(path, newPath);
             }
             //Als je database wilt refreshen uncomment dit:
