@@ -9,4 +9,9 @@
     <SolidColorBrush x:Key="AppBackgroundGrey" Color="#353535" />
     <SolidColorBrush x:Key="AppBackgroundOrange" Color="#EC6707" />
 
+    <Style x:Key="AppFontStyleStandard" TargetType="UserControl" >
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="FontFamily" Value="Assets/Helvetica-font.ttf#Helvetica"></Setter>
+    </Style>
+
 </ResourceDictionary>

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using WebSentiment.Classes;
+using WebSentiment.UserControls;
 using Windows.UI.Core;
 using System.Diagnostics;
 
@@ -83,7 +84,7 @@ namespace WebSentiment.UserControls
         public void LoadHeader()
         {
             spHeader.Children.Clear();
-            Header.PageHeader pageHeader = new Header.PageHeader(this, category, page);
+            Header.Header pageHeader = new Header.Header(this, category, page);
             spHeader.Children.Add(pageHeader);
         }
 

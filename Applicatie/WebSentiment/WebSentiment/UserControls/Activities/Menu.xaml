@@ -1,0 +1,34 @@
+﻿<UserControl x:Name="MenuUserControl"
+    x:Class="WebSentiment.UserControls.Activity.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AppBackgroundWhite}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.4*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <StackPanel Margin="20 7" x:Name="spRowOne"  Grid.Row="1" />
+        <StackPanel Margin="20 7" x:Name="spRowTwo" Grid.Row="3" />
+        <StackPanel Margin="20 7" x:Name="spRowThree" Grid.Row="5" />
+        <StackPanel Margin="20 7" x:Name="spRowFour" Grid.Row="7" />
+        <StackPanel Margin="20 7" x:Name="spRowFive" Grid.Row="9" />
+    </Grid>
+</UserControl>

@@ -42,10 +42,7 @@ namespace WebSentiment
         {
             string databaseName = "WebSentimentDB.sqlite";
             string path = Path.Combine(Windows.ApplicationModel.Package.Current.InstalledLocation.Path, "Data", databaseName);
-            //path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, databaseName);
-
             string newPath = Path.Combine(Path.GetTempPath(), databaseName);
-
 
             if (!(File.Exists(newPath)))
             {
@@ -53,6 +50,12 @@ namespace WebSentiment
                 //fi.CopyTo(newPath, true);
                 File.Copy(path, newPath);
             }
+            //Als je database wilt refreshen uncomment dit:
+            //else
+            //{
+            //    File.Delete(newPath);
+            //    File.Copy(path, newPath);
+            //}
         }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
