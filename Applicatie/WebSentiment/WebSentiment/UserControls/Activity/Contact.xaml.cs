@@ -120,7 +120,7 @@ namespace WebSentiment.UserControls.Activity
             }
             else
             {
-                lblName.Text = "Uw naam moet minstens 2 en maximaal 25 letters bevatten.";
+                lblName.Text = "Uw naam moet 2-25 letters bevatten.";
                 return false;
             }
             return true;
@@ -141,7 +141,7 @@ namespace WebSentiment.UserControls.Activity
             string phoneInput = tbPhone.Text;
             if (!int.TryParse(phoneInput, out phoneNumber))
             {
-                lblPhone.Text = "Uw telefoonnummer kan alleen bestaan uit cijfers.";
+                lblPhone.Text = "Uw nummer kan alleen bestaan uit cijfers.";
                 return false;
             }
             if (phoneInput.Count() >= 10 && phoneInput.Count() <= 15)
@@ -149,7 +149,7 @@ namespace WebSentiment.UserControls.Activity
             }
             else
             {
-                lblPhone.Text = "Uw telefoonnummer moet minstens 10 en maximaal 15 cijfers bevatten.";
+                lblPhone.Text = "Uw nummer moet 10-15 cijfers bevatten.";
                 return false;
             }
             return true;
@@ -162,7 +162,7 @@ namespace WebSentiment.UserControls.Activity
             }
             else
             {
-                lblMessage.Text = "Uw bericht moet minstens 10 en maximaal 1000 karakters bevatten.";
+                lblMessage.Text = "Uw bericht moet 10-1000 karakters bevatten.";
                 return false;
             }
             return true;
