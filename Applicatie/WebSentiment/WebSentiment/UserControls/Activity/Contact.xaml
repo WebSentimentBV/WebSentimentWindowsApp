@@ -45,7 +45,7 @@
 
                     <RowDefinition Height="20"></RowDefinition>
                     <RowDefinition Height="120"></RowDefinition>
-                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition Height="15"></RowDefinition>
                     
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
