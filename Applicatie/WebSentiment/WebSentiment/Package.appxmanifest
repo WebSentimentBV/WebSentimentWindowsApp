@@ -4,7 +4,7 @@
   <mp:PhoneIdentity PhoneProductId="7f358169-4a0e-482c-a62f-c8dd61714520" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>WebSentiment</DisplayName>
-    <PublisherDisplayName>TARIK</PublisherDisplayName>
+    <PublisherDisplayName>WebSentiment</PublisherDisplayName>
     <Logo>Images\WebSentiment-logo-icon.png</Logo>
   </Properties>
   <Dependencies>

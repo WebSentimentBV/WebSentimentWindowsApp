@@ -16,6 +16,7 @@ using WebSentiment.Classes;
 using Windows.UI.Core;
 using System.Diagnostics;
 
+
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace WebSentiment.UserControls
@@ -35,12 +36,14 @@ namespace WebSentiment.UserControls
             category.categoryID = 1;
             //pageHistoryList.Add(category.categoryID);
             LoadPage(category.categoryID);
-            SystemNavigationManager.GetForCurrentView().BackRequested += (s, e) =>
-            {
-                pageHistoryList.Remove(pageHistoryList.Last());
-                LoadPage(pageHistoryList.Count);
-                pageHistoryList.Remove(pageHistoryList.Last());
-            };
+
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+        }
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            pageHistoryList.Remove(pageHistoryList.Last());
+            LoadPage(pageHistoryList.Count);
+            pageHistoryList.Remove(pageHistoryList.Last());
         }
 
         public void ShowBackbutton(bool bShowBackButton)
