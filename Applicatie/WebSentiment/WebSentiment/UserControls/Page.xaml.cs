@@ -94,12 +94,14 @@ namespace WebSentiment.UserControls
             {
                 case "Menu":
                     {
+                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Menu pageMenu = new Activity.Menu(this);
                         spActivity.Children.Add(pageMenu);
                         break;
                     }
                 case "SliderProjects":
                     {
+                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.SliderProjects pageSliderProjects = new Activity.SliderProjects();
                         spActivity.Children.Add(pageSliderProjects);
 
@@ -107,24 +109,28 @@ namespace WebSentiment.UserControls
                     }
                 case "Text":
                     {
+                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Text pageText = new Activity.Text(page);
                         spActivity.Children.Add(pageText);
                         break;
                     }
                 case "Slider":
                     {
+                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Slider pageSlider = new Activity.Slider();
                         spActivity.Children.Add(pageSlider);
                         break;
                     }
                 case "ImageText":
                     {
+                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.ImageText pageImageText = new Activity.ImageText(page);
                         spActivity.Children.Add(pageImageText);
                         break;
                     }
                 case "Contact":
                     {
+                       spActivity.Background  = (SolidColorBrush)Application.Current.Resources["AppBackgroundGrey"];
                         Activity.Contact pageContact = new Activity.Contact(page);
                         spActivity.Children.Add(pageContact);
                         break;

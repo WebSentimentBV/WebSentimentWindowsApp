@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     >
 
-    <Grid Padding="0 6" Background="{ThemeResource AppBackgroundGrey}">
+    <Grid Padding="0 4" Background="{ThemeResource AppBackgroundGrey}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="4*"/>
