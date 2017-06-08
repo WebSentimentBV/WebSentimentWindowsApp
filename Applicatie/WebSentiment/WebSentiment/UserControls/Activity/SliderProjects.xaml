@@ -30,7 +30,7 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image x:Name="imgPrevious" Tapped="imgPrevious_Tapped" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Images/Angle-left.png" />
+            <Image x:Name="imgPrevious" Tapped="imgPrevious_Tapped" Width="50" Height="50" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Images/Angle-left.png" />
             <Image x:Name="imgProjectImage" Grid.Row="1" Grid.Column="1"/>
             <Image x:Name="imgNext" Tapped="imgNext_Tapped" Width="50" Height="50" Grid.Row="1" Grid.Column="2" Source="ms-appx:///Images/Angle-right.png"/>
         </Grid>
