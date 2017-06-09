@@ -48,12 +48,12 @@ namespace WebSentiment
             {
                 File.Copy(path, newPath);
             }
-            //Als je database wilt refreshen uncomment dit:
-            else
-            {
-                File.Delete(newPath);
-                File.Copy(path, newPath);
-            }
+            //Uncomment when you need to update the already existing database file:
+            //else
+            //{
+            //    File.Delete(newPath);
+            //    File.Copy(path, newPath);
+            //}
         }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -72,7 +72,6 @@ namespace WebSentiment
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-                rootFrame.Navigated += OnNavigated;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -81,15 +80,6 @@ namespace WebSentiment
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
-
-                // Register a handler for BackRequested events and set the
-                // visibility of the Back button
-                
-
-                SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-                    rootFrame.CanGoBack ?
-                    AppViewBackButtonVisibility.Visible :
-                    AppViewBackButtonVisibility.Collapsed;
             }
 
             if (e.PrelaunchActivated == false)
@@ -116,14 +106,6 @@ namespace WebSentiment
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
-        private void OnNavigated(object sender, NavigationEventArgs e)
-        {
-            // Each time a navigation event occurs, update the Back button's visibility
-            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
-                ((Frame)sender).CanGoBack ?
-                AppViewBackButtonVisibility.Visible :
-                AppViewBackButtonVisibility.Collapsed;
-        }
 
         /// <summary>
         /// Invoked when application execution is being suspended.  Application state is saved

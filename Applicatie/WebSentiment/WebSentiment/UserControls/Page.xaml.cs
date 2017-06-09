@@ -29,7 +29,7 @@ namespace WebSentiment.UserControls
 
         public Category category { get; set; }
         public Classes.Page page { get; set; }
-        List<int> pageHistoryList;
+        public List<int> pageHistoryList;
         public Page()
         {
             this.InitializeComponent();
@@ -41,7 +41,7 @@ namespace WebSentiment.UserControls
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
 
-    private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)
         {
             string platform = Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily;
             if (platform == "Windows.Desktop")
@@ -52,24 +52,22 @@ namespace WebSentiment.UserControls
             }
             else if (platform == "Windows.Mobile")
             {
-                //Frame rootFrame = Window.Current.Content as Frame;
-                //e.Handled = true;
-                //rootFrame.GoBack();
+                Application.Current.Exit();
             }
         }
 
         public void ShowBackbutton(bool bShowBackButton)
         {
-            if(bShowBackButton)
+            if (bShowBackButton)
             {
                 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-               
+
             }
             else
             {
                 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
             }
-           
+
         }
         public void LoadPage(int categoryID)
         {
@@ -81,7 +79,7 @@ namespace WebSentiment.UserControls
 
             LoadHeader();
             LoadActivity();
-            if(category.categoryID != 1)
+            if (category.categoryID != 1)
             {
                 ShowBackbutton(true);
             }
@@ -89,7 +87,7 @@ namespace WebSentiment.UserControls
             {
                 ShowBackbutton(false);
             }
-           
+
         }
 
         public void LoadHeader()
@@ -142,7 +140,7 @@ namespace WebSentiment.UserControls
                     }
                 case "Contact":
                     {
-                       SpActivity.Background  = (SolidColorBrush)Application.Current.Resources["AppBackgroundGrey"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundGrey"];
                         Activity.Contact pageContact = new Activity.Contact(page);
                         SpActivity.Children.Add(pageContact);
                         break;

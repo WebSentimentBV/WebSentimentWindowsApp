@@ -50,6 +50,7 @@ namespace WebSentiment.UserControls.Header
         {
             if (category.categoryID != 1)
             {
+                pageUserControl.pageHistoryList.Clear();
                 pageUserControl.LoadPage(1);
             }
         }
