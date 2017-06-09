@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using WebSentiment.Classes;
 using Windows.UI.Popups;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -32,18 +33,18 @@ namespace WebSentiment.UserControls.Activity
 
         private void Init()
         {
-            lblTextOne.Text = page.pageTextOne;
-            lblTextTwo.Text = page.pageTextTwo.Replace(@"\n", "\n");
+            LblTextOne.Text = page.pageTextOne.Replace(@"\n", "\n");
+            LblTextTwo.Text = page.pageTextTwo;
         }
 
         private void SendMail()
         {
-            string mailMessage = tbMessage.Text += "\n\nMet vriendelijke groet, \n" + tbName.Text + " \n" + tbPhone.Text; 
-         MailManager mailManager = new MailManager(tbMessage.Text, "nigel@websentiment.nl");
-        mailManager.SendMail();
+            string mailMessage = tbMessage.Text + "\n\nMet vriendelijke groet, \n" + tbName.Text + " \n" + tbMail.Text + " \n" + tbPhone.Text;
+            MailManager mailManager = new MailManager(mailMessage, "nigel@websentiment.nl");
+            mailManager.SendMail();
             FieldsCleaner(false, true);
         }
-        private async void btnSendMail_Click(object sender, RoutedEventArgs e)
+        private async void BtnSendMail_Click(object sender, RoutedEventArgs e)
         {
             FieldsCleaner(true, false);
             if (FieldsChecker())
@@ -51,30 +52,28 @@ namespace WebSentiment.UserControls.Activity
                 var dialog = new Windows.UI.Popups.MessageDialog(
                 "Uw bericht wordt verstuurd in het volgende scherm.",
                 "Ga door naar het volgende scherm.");
-                dialog.Commands.Add(new UICommand(
-        "Doorgaan", new UICommandInvokedHandler(this.CommandInvokedHandler)));
+                dialog.Commands.Add(new UICommand("Doorgaan", new UICommandInvokedHandler(this.CommandInvokedHandler)));
                 await dialog.ShowAsync();
             }
         }
 
         private void CommandInvokedHandler(IUICommand command)
         {
-            // Display message showing the label of the command that was invoked
-            if(command.Label == "Doorgaan")
+            if (command.Label == "Doorgaan")
             {
                 SendMail();
             }
         }
         private void FieldsCleaner(bool bLabels, bool bTextBoxes)
         {
-            if( bLabels)
+            if (bLabels)
             {
                 lblName.Text = "";
                 lblMail.Text = "";
                 lblPhone.Text = "";
                 lblMessage.Text = "";
             }
-            if(bTextBoxes)
+            if (bTextBoxes)
             {
                 tbName.Text = "";
                 tbMail.Text = "";
@@ -114,20 +113,19 @@ namespace WebSentiment.UserControls.Activity
                 lblName.Text = "Uw naam kan alleen bestaan uit letters.";
                 return false;
             }
-            if(nameInput.Count() >= 2 && nameInput.Count() <= 25)
-            {
-            }
-            else
+            if (nameInput.Count() < 2 || nameInput.Count() > 25)
             {
                 lblName.Text = "Uw naam moet 2-25 letters bevatten.";
                 return false;
             }
+
             return true;
         }
         private bool CheckMail()
         {
-            var eAA = new EmailAddressAttribute();
-            if(!eAA.IsValid(tbMail.Text))
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(tbMail.Text);
+            if (!match.Success)
             {
                 lblMail.Text = "Dit is geen geldig e-mailadres.";
                 return false;
@@ -151,15 +149,12 @@ namespace WebSentiment.UserControls.Activity
                 lblPhone.Text = "Uw nummer moet 10-15 cijfers bevatten.";
                 return false;
             }
-                       return true;
+            return true;
         }
         private bool CheckMessage()
         {
             string messageInput = tbMessage.Text;
-            if (messageInput.Count() >= 10 && messageInput.Count() <= 1000)
-            {
-            }
-            else
+            if (messageInput.Count() < 10 || messageInput.Count() > 1000)
             {
                 lblMessage.Text = "Uw bericht moet 10-1000 karakters bevatten.";
                 return false;
@@ -167,7 +162,7 @@ namespace WebSentiment.UserControls.Activity
             return true;
         }
 
-        private void lblTextTwo_Tapped(object sender, TappedRoutedEventArgs e)
+        private void LblTextTwo_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Windows.ApplicationModel
             .Calls.PhoneCallManager

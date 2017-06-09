@@ -35,25 +35,25 @@ namespace WebSentiment.UserControls.Activity
             foreach (Category pageSubItem in category.GetSubCategories())
             {
                 Objects.Button btnPage = new Objects.Button(pageUserControl, pageSubItem.categoryID, pageSubItem.categoryTitle);
-                if (spRowOne.Children.Count() < 1)
+                if (SpRowOne.Children.Count() < 1)
                 {
-                    spRowOne.Children.Add(btnPage);
+                    SpRowOne.Children.Add(btnPage);
                 }
-                else if (spRowTwo.Children.Count() < 1)
+                else if (SpRowTwo.Children.Count() < 1)
                 {
-                    spRowTwo.Children.Add(btnPage);
+                    SpRowTwo.Children.Add(btnPage);
                 }
-                else if (spRowThree.Children.Count() < 1)
+                else if (SpRowThree.Children.Count() < 1)
                 {
-                    spRowThree.Children.Add(btnPage);
+                    SpRowThree.Children.Add(btnPage);
                 }
-                else if (spRowFour.Children.Count() < 1)
+                else if (SpRowFour.Children.Count() < 1)
                 {
-                    spRowFour.Children.Add(btnPage);
+                    SpRowFour.Children.Add(btnPage);
                 }
-                else if (spRowFive.Children.Count() < 1)
+                else if (SpRowFive.Children.Count() < 1)
                 {
-                    spRowFive.Children.Add(btnPage);
+                    SpRowFive.Children.Add(btnPage);
                 }
             }
         }

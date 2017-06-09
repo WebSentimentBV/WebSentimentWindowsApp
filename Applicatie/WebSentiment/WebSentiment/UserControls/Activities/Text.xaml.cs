@@ -29,7 +29,7 @@ namespace WebSentiment.UserControls.Activity
 
         private void Init()
         {
-            lblText.Text = page.pageTextOne;
+            LblText.Text = page.pageTextOne;
         }
     }
 }

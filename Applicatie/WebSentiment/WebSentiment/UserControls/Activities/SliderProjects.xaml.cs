@@ -42,43 +42,43 @@ namespace WebSentiment.UserControls.Activity
                 case "Dekstop":
                     {
                         //Select Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop.png", UriKind.Absolute));
+                        ImgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop.png", UriKind.Absolute));
                         //Deselect Tablet image.
-                        imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
+                        ImgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
                         //Deselect Phone image.
-                        imgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone-not-selected.png", UriKind.Absolute));
+                        ImgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone-not-selected.png", UriKind.Absolute));
                         //Change project Image.
-                        imageManager.SetImage(imgProjectImage, project.projectImageOne);
+                        imageManager.SetImage(ImgProjectImage, project.projectImageOne);
                         break;
                     }
                 case "Tablet":
                     {
                         //Deselect Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
+                        ImgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
                         //Select Tablet image.
-                        imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet.png", UriKind.Absolute));
+                        ImgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet.png", UriKind.Absolute));
                         //Deselect Phone image.
-                        imgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone-not-selected.png", UriKind.Absolute));
+                        ImgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone-not-selected.png", UriKind.Absolute));
                         //Change project Image.
-                        imageManager.SetImage(imgProjectImage, project.projectImageTwo);
+                        imageManager.SetImage(ImgProjectImage, project.projectImageTwo);
                         break;
                     }
                 case "Phone":
                     {
                         //Deselect Dekstop image.
-                        imgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
+                        ImgDekstop.Source = new BitmapImage(new Uri("ms-appx:///Images/Dekstop-not-selected.png", UriKind.Absolute));
                         //Deselect Tablet image.
-                        imgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
+                        ImgTablet.Source = new BitmapImage(new Uri("ms-appx:///Images/Tablet-not-selected.png", UriKind.Absolute));
                         //Select Phone image.
-                        imgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone.png", UriKind.Absolute));
+                        ImgPhone.Source = new BitmapImage(new Uri("ms-appx:///Images/Phone.png", UriKind.Absolute));
                         //Change project Image.
-                        imageManager.SetImage(imgProjectImage, project.projectImageThree);
+                        imageManager.SetImage(ImgProjectImage, project.projectImageThree);
                         break;
                     }
             }
         }
 
-        private void imgNext_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgNext_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if(projectID >= 3)
             {
@@ -92,7 +92,7 @@ namespace WebSentiment.UserControls.Activity
             }
         }
 
-        private void imgPrevious_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgPrevious_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (projectID <= 1)
             {
@@ -106,19 +106,19 @@ namespace WebSentiment.UserControls.Activity
             }
         }
 
-        private void imgDekstop_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgDekstop_Tapped(object sender, TappedRoutedEventArgs e)
         {
             screenMode = "Dekstop";
             LoadProject();
         }
 
-        private void imgTablet_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgTablet_Tapped(object sender, TappedRoutedEventArgs e)
         {
             screenMode = "Tablet";
             LoadProject();
         }
 
-        private void imgPhone_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgPhone_Tapped(object sender, TappedRoutedEventArgs e)
         {
             screenMode = "Phone";
             LoadProject();

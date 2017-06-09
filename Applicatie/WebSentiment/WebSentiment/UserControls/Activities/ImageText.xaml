@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="20 20"  Background="{ThemeResource AppBackgroundWhite}">
+    <Grid Margin="20 20" Background="{ThemeResource AppBackgroundWhite}">
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
@@ -18,8 +18,8 @@
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image x:Name="imgPicture" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Image x:Name="ImgPicture" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
-        <TextBlock x:Name="lblText" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LblText" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

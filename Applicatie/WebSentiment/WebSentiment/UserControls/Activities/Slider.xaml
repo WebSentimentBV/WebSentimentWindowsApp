@@ -19,7 +19,7 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image x:Name="imgPrevious" Tapped="imgPrevious_Tapped" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Images/Angle-left.png" />
+            <Image x:Name="imgPrevious" Tapped="ImgPrevious_Tapped" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Images/Angle-left.png" />
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -35,8 +35,8 @@
                     <ColumnDefinition Width="30"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="imgLogoOne" Grid.Row="1" Grid.Column="0" Stretch="Fill" />
-                <Image x:Name="imgLogoTwo" Grid.Row="1" Grid.Column="2" Stretch="Fill"  />
+                <Image x:Name="ImgLogoOne" Grid.Row="1" Grid.Column="0" Stretch="Fill" />
+                <Image x:Name="ImgLogoTwo" Grid.Row="1" Grid.Column="2" Stretch="Fill"  />
             </Grid>
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
@@ -44,8 +44,8 @@
                     <ColumnDefinition Width="30"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="imgLogoThree" Grid.Row="3" Grid.Column="0" Stretch="Fill" />
-                <Image x:Name="imgLogoFour" Grid.Row="3" Grid.Column="2" Stretch="Fill"  />
+                <Image x:Name="ImgLogoThree" Grid.Row="3" Grid.Column="0" Stretch="Fill" />
+                <Image x:Name="ImgLogoFour" Grid.Row="3" Grid.Column="2" Stretch="Fill"  />
             </Grid>
         </Grid>
         <Grid Grid.Column="3">
@@ -54,43 +54,7 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Image x:Name="imgNext" Tapped="imgNext_Tapped" Width="50" Height="50" Grid.Row="1" Grid.Column="3" Source="ms-appx:///Images/Angle-right.png"/>
+            <Image x:Name="ImgNext" Tapped="ImgNext_Tapped" Width="50" Height="50" Grid.Row="1" Grid.Column="3" Source="ms-appx:///Images/Angle-right.png"/>
         </Grid>
-        <!--</Grid.RowDefinitions>
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
-                    <ColumnDefinition Width="105"></ColumnDefinition>
-                    <ColumnDefinition Width="40"></ColumnDefinition>
-                    <ColumnDefinition Width="105"></ColumnDefinition>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Image x:Name="imgLogoOne" Grid.Row="0" Grid.Column="1" />
-                <Image x:Name="imgLogoTwo" Grid.Row="0" Grid.Column="3"  />
-            </Grid>
-            -->
-        <!--<Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
-                    <ColumnDefinition Width="260"></ColumnDefinition>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Image x:Name="imgPrevious" Tapped="imgPrevious_Tapped" Grid.Row="1" Grid.Column="0" Source="ms-appx:///Images/Angle-left.png" />
-                <Image x:Name="imgNext" Tapped="imgNext_Tapped" Width="50" Height="50" Grid.Row="1" Grid.Column="2" Source="ms-appx:///Images/Angle-right.png"/>
-            </Grid>-->
-        <!--
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="105"></ColumnDefinition>
-                <ColumnDefinition Width="40"></ColumnDefinition>
-                <ColumnDefinition Width="105"></ColumnDefinition>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Image x:Name="imgLogoThree" Grid.Row="0" Grid.Column="1" />
-            <Image x:Name="imgLogoFour" Grid.Row="0" Grid.Column="3"  />
-        </Grid>-->
-        <!--</Grid>-->
     </Grid>
 </UserControl>

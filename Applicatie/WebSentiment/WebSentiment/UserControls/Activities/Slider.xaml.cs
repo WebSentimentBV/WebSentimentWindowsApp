@@ -40,10 +40,10 @@ namespace WebSentiment.UserControls.Activity
 
         private void UpdateSlider()
         {
-            imgLogoOne.Visibility = Visibility.Collapsed;
-            imgLogoTwo.Visibility = Visibility.Collapsed;
-            imgLogoThree.Visibility = Visibility.Collapsed;
-            imgLogoFour.Visibility = Visibility.Collapsed;
+            ImgLogoOne.Visibility = Visibility.Collapsed;
+            ImgLogoTwo.Visibility = Visibility.Collapsed;
+            ImgLogoThree.Visibility = Visibility.Collapsed;
+            ImgLogoFour.Visibility = Visibility.Collapsed;
             ImageManager imageManager = new ImageManager();
             int count = 0;
             foreach (Client client in listOfClients.Skip(startID).Take(endID - startID))
@@ -52,30 +52,30 @@ namespace WebSentiment.UserControls.Activity
                 {
                     case 0:
                         {
-                            imgLogoOne.Visibility = Visibility.Visible;
-                            imageManager.SetImage(imgLogoOne, client.clientImage);
-                            imgLogoOne.Stretch = Stretch.Fill;
+                            ImgLogoOne.Visibility = Visibility.Visible;
+                            imageManager.SetImage(ImgLogoOne, client.clientImage);
+                            ImgLogoOne.Stretch = Stretch.Fill;
                             break;
                         }
                     case 1:
                         {
-                            imgLogoTwo.Visibility = Visibility.Visible;
-                            imageManager.SetImage(imgLogoTwo, client.clientImage);
-                            imgLogoTwo.Stretch = Stretch.Fill;
+                            ImgLogoTwo.Visibility = Visibility.Visible;
+                            imageManager.SetImage(ImgLogoTwo, client.clientImage);
+                            ImgLogoTwo.Stretch = Stretch.Fill;
                             break;
                         }
                     case 2:
                         {
-                            imgLogoThree.Visibility = Visibility.Visible;
-                            imageManager.SetImage(imgLogoThree, client.clientImage);
-                            imgLogoThree.Stretch = Stretch.Fill;
+                            ImgLogoThree.Visibility = Visibility.Visible;
+                            imageManager.SetImage(ImgLogoThree, client.clientImage);
+                            ImgLogoThree.Stretch = Stretch.Fill;
                             break;
                         }
                     case 3:
                         {
-                            imgLogoFour.Visibility = Visibility.Visible;
-                            imageManager.SetImage(imgLogoFour, client.clientImage);
-                            imgLogoFour.Stretch = Stretch.Fill;
+                            ImgLogoFour.Visibility = Visibility.Visible;
+                            imageManager.SetImage(ImgLogoFour, client.clientImage);
+                            ImgLogoFour.Stretch = Stretch.Fill;
                             break;
                         }
                 }
@@ -83,7 +83,7 @@ namespace WebSentiment.UserControls.Activity
             }
         }
 
-        private void imgPrevious_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgPrevious_Tapped(object sender, TappedRoutedEventArgs e)
         {
             int amountOfImagesTotal = 20;
             int amountOfImagesPerSlider = 4;
@@ -102,7 +102,7 @@ namespace WebSentiment.UserControls.Activity
             UpdateSlider();
         }
 
-        private void imgNext_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgNext_Tapped(object sender, TappedRoutedEventArgs e)
         {
             int amountOfImagesTotal = 20;
             int amountOfImagesPerSlider = 4;

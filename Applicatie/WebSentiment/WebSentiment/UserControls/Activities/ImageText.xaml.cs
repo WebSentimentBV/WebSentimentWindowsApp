@@ -31,8 +31,8 @@ namespace WebSentiment.UserControls.Activity
         private void Init()
         {
             ImageManager imageManager = new ImageManager();
-            imageManager.SetImage(imgPicture, page.pageImage);
-            lblText.Text = page.pageTextOne;
+            imageManager.SetImage(ImgPicture, page.pageImage);
+            LblText.Text = page.pageTextOne;
         }
     }
 }

@@ -20,8 +20,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock  Padding="10 5"  x:Name="lblTextOne" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="PageTextOne" TextAlignment="Right" VerticalAlignment="Top"/>
-            <TextBlock Padding="10 5" Tapped="lblTextTwo_Tapped" x:Name="lblTextTwo" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="PageTextTwo" TextAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock  Padding="10 5"  x:Name="LblTextOne" Grid.Row="0" Grid.Column="0" TextWrapping="Wrap" Text="PageTextOne" TextAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock Padding="10 5" Tapped="LblTextTwo_Tapped" x:Name="LblTextTwo" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="PageTextTwo" TextAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -62,7 +62,7 @@
                 <TextBlock x:Name="lblMessage" Foreground="#964140" Grid.Row="9" TextWrapping="Wrap" Text=""/>
                 <TextBox  PlaceholderText="UW BERICHT *" x:Name="tbMessage" Background="{ThemeResource AppBackgroundWhite}" Foreground="{ThemeResource AppBackgroundGrey}" HorizontalAlignment="Left" Height="110" Width="300" Grid.Row="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
 
-                <Button Margin="0 10" Foreground="{ThemeResource AppBackgroundWhite}" Click="btnSendMail_Click" x:Name="btnSendMail" Content="Verzenden" Height="35" Width="300" Grid.Row="12"  Background="{ThemeResource AppBackgroundOrange}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Margin="0 10" Foreground="{ThemeResource AppBackgroundWhite}" Click="BtnSendMail_Click" x:Name="BtnSendMail" Content="Verzenden" Height="35" Width="300" Grid.Row="12"  Background="{ThemeResource AppBackgroundOrange}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
     </Grid>

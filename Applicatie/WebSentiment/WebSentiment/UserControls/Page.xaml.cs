@@ -16,6 +16,8 @@ using WebSentiment.Classes;
 using WebSentiment.UserControls;
 using Windows.UI.Core;
 using System.Diagnostics;
+using Windows.Phone.UI.Input;
+using Windows.ApplicationModel.Core;
 
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
@@ -35,16 +37,25 @@ namespace WebSentiment.UserControls
             page = new Classes.Page();
             pageHistoryList = new List<int>();
             category.categoryID = 1;
-            //pageHistoryList.Add(category.categoryID);
             LoadPage(category.categoryID);
-
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
-        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+
+    private void OnBackRequested(object sender, BackRequestedEventArgs e)
         {
-            pageHistoryList.Remove(pageHistoryList.Last());
-            LoadPage(pageHistoryList.Count);
-            pageHistoryList.Remove(pageHistoryList.Last());
+            string platform = Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily;
+            if (platform == "Windows.Desktop")
+            {
+                pageHistoryList.Remove(pageHistoryList.Last());
+                LoadPage(pageHistoryList.Count);
+                pageHistoryList.Remove(pageHistoryList.Last());
+            }
+            else if (platform == "Windows.Mobile")
+            {
+                //Frame rootFrame = Window.Current.Content as Frame;
+                //e.Handled = true;
+                //rootFrame.GoBack();
+            }
         }
 
         public void ShowBackbutton(bool bShowBackButton)
@@ -83,57 +94,57 @@ namespace WebSentiment.UserControls
 
         public void LoadHeader()
         {
-            spHeader.Children.Clear();
+            SpHeader.Children.Clear();
             Header.Header pageHeader = new Header.Header(this, category, page);
-            spHeader.Children.Add(pageHeader);
+            SpHeader.Children.Add(pageHeader);
         }
 
         public void LoadActivity()
         {
-            spActivity.Children.Clear();
+            SpActivity.Children.Clear();
             switch (page.pageType)
             {
                 case "Menu":
                     {
-                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Menu pageMenu = new Activity.Menu(this);
-                        spActivity.Children.Add(pageMenu);
+                        SpActivity.Children.Add(pageMenu);
                         break;
                     }
                 case "SliderProjects":
                     {
-                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.SliderProjects pageSliderProjects = new Activity.SliderProjects();
-                        spActivity.Children.Add(pageSliderProjects);
+                        SpActivity.Children.Add(pageSliderProjects);
 
                         break;
                     }
                 case "Text":
                     {
-                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Text pageText = new Activity.Text(page);
-                        spActivity.Children.Add(pageText);
+                        SpActivity.Children.Add(pageText);
                         break;
                     }
                 case "Slider":
                     {
-                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.Slider pageSlider = new Activity.Slider();
-                        spActivity.Children.Add(pageSlider);
+                        SpActivity.Children.Add(pageSlider);
                         break;
                     }
                 case "ImageText":
                     {
-                        spActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
+                        SpActivity.Background = (SolidColorBrush)Application.Current.Resources["AppBackgroundWhite"];
                         Activity.ImageText pageImageText = new Activity.ImageText(page);
-                        spActivity.Children.Add(pageImageText);
+                        SpActivity.Children.Add(pageImageText);
                         break;
                     }
                 case "Contact":
                     {
-                       spActivity.Background  = (SolidColorBrush)Application.Current.Resources["AppBackgroundGrey"];
+                       SpActivity.Background  = (SolidColorBrush)Application.Current.Resources["AppBackgroundGrey"];
                         Activity.Contact pageContact = new Activity.Contact(page);
-                        spActivity.Children.Add(pageContact);
+                        SpActivity.Children.Add(pageContact);
                         break;
                     }
                 default:

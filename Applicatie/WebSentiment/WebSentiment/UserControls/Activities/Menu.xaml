@@ -23,12 +23,11 @@
 
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="0.4*"></RowDefinition>
-
         </Grid.RowDefinitions>
-        <StackPanel Margin="20 7" x:Name="spRowOne"  Grid.Row="1" />
-        <StackPanel Margin="20 7" x:Name="spRowTwo" Grid.Row="3" />
-        <StackPanel Margin="20 7" x:Name="spRowThree" Grid.Row="5" />
-        <StackPanel Margin="20 7" x:Name="spRowFour" Grid.Row="7" />
-        <StackPanel Margin="20 7" x:Name="spRowFive" Grid.Row="9" />
+        <StackPanel Margin="20 7" x:Name="SpRowOne"  Grid.Row="1" />
+        <StackPanel Margin="20 7" x:Name="SpRowTwo" Grid.Row="3" />
+        <StackPanel Margin="20 7" x:Name="SpRowThree" Grid.Row="5" />
+        <StackPanel Margin="20 7" x:Name="SpRowFour" Grid.Row="7" />
+        <StackPanel Margin="20 7" x:Name="SpRowFive" Grid.Row="9" />
     </Grid>
 </UserControl>

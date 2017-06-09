@@ -35,18 +35,18 @@ namespace WebSentiment.UserControls.Header
 
         private void Load()
         {
-            lblPageName.Text = page.pageTitle;
+            LblPageName.Text = page.pageTitle;
             if (category.categoryID > 1)
             {
-                imgHome.Source = new BitmapImage(new Uri("ms-appx:///Images/Home.png", UriKind.Absolute));
+                ImgHome.Source = new BitmapImage(new Uri("ms-appx:///Images/Home.png", UriKind.Absolute));
             }
             else
             {
-                imgHome.Source = new BitmapImage(new Uri("ms-appx:///Images/WebSentiment-logo-icon.png", UriKind.Absolute));
+                ImgHome.Source = new BitmapImage(new Uri("ms-appx:///Images/WebSentiment-logo-icon.png", UriKind.Absolute));
             }
         }
 
-        private void imgHome_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgHome_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (category.categoryID != 1)
             {
@@ -54,7 +54,7 @@ namespace WebSentiment.UserControls.Header
             }
         }
 
-        private void imgContact_Tapped(object sender, TappedRoutedEventArgs e)
+        private void ImgContact_Tapped(object sender, TappedRoutedEventArgs e)
         {
             if (category.categoryID != 6)
             {

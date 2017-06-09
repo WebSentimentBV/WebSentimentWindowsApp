@@ -49,11 +49,11 @@ namespace WebSentiment
                 File.Copy(path, newPath);
             }
             //Als je database wilt refreshen uncomment dit:
-            //else
-            //{
-            //    File.Delete(newPath);
-            //    File.Copy(path, newPath);
-            //}
+            else
+            {
+                File.Delete(newPath);
+                File.Copy(path, newPath);
+            }
         }
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

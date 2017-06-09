@@ -9,13 +9,12 @@
     Style="{ThemeResource AppFontStyleStandard}"
     >
 
-    <Grid x:Name="pageGrid" >
-                <Grid.RowDefinitions>
+    <Grid x:Name="PageGrid" >
+        <Grid.RowDefinitions>
             <RowDefinition Height=".1*"></RowDefinition>
-                    <RowDefinition Height=".9*"></RowDefinition>
-                </Grid.RowDefinitions>
-        <StackPanel Background="{ThemeResource AppBackgroundGrey}" x:Name="spHeader" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"></StackPanel>
-        <StackPanel Background="{ThemeResource AppBackgroundWhite}" x:Name="spActivity" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"></StackPanel>
-            </Grid>
-            
+            <RowDefinition Height=".9*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="{ThemeResource AppBackgroundGrey}" x:Name="SpHeader" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"></StackPanel>
+        <StackPanel Background="{ThemeResource AppBackgroundWhite}" x:Name="SpActivity" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"></StackPanel>
+    </Grid>
 </UserControl>
