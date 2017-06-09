@@ -26,6 +26,6 @@ Vervolgens ook nog is met nuget sqlite uitvoeren
 ( )10. tool die test of je programma goed geprogrameerd is. unit test of bex ofzo.
 
 11. functionele test: 2 collumen positief en negatief. Verwachtte uitvoer ook erbij zetten,
-de vragen uit het functionele ontwerp halen. VOltoed de knop aan deze afmetingen..?
+de vragen uit het functionele ontwerp halen. Voltooid de knop aan deze afmetingen..?
 Op het eind is de test gepasseerd?
 
