@@ -62,7 +62,7 @@ namespace WebSentiment.UserControls
         }
         public void LoadPage(int categoryID)
         {
-                pageHistoryList.Add(category.categoryID);
+            pageHistoryList.Add(category.categoryID);
             category.categoryID = categoryID;
             category.GetCategory();
             page.pageID = category.pageID;
@@ -141,7 +141,6 @@ namespace WebSentiment.UserControls
                         break;
                     }
             }
-            
         }
     }
 }

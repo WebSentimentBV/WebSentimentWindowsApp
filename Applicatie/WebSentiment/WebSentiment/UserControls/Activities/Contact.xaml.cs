@@ -136,22 +136,22 @@ namespace WebSentiment.UserControls.Activity
         }
         private bool CheckPhone()
         {
-            int phoneNumber;
+            double phoneNumber;
             string phoneInput = tbPhone.Text;
-            if (!int.TryParse(phoneInput, out phoneNumber))
-            {
-                lblPhone.Text = "Uw nummer kan alleen bestaan uit cijfers.";
-                return false;
-            }
             if (phoneInput.Count() >= 10 && phoneInput.Count() <= 15)
             {
+                if (!double.TryParse(phoneInput, out phoneNumber))
+                {
+                    lblPhone.Text = "Uw nummer kan alleen bestaan uit cijfers.";
+                    return false;
+                }
             }
             else
             {
                 lblPhone.Text = "Uw nummer moet 10-15 cijfers bevatten.";
                 return false;
             }
-            return true;
+                       return true;
         }
         private bool CheckMessage()
         {
