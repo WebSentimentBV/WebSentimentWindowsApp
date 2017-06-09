@@ -39,8 +39,12 @@ namespace WebSentiment.UserControls.Activity
 
         private void SendMail()
         {
-            string mailMessage = tbMessage.Text + "\n\nMet vriendelijke groet, \n" + tbName.Text + " \n" + tbMail.Text + " \n" + tbPhone.Text;
-            MailManager mailManager = new MailManager(mailMessage, "nigel@websentiment.nl");
+            string senderName = tbName.Text;
+            string senderMail = tbMail.Text;
+            string senderPhone = tbPhone.Text;
+            string mailSubject = "Contact bericht van " + senderName + " via Windows Applicatie";
+            string mailMessage = tbMessage.Text + "\n\nMet vriendelijke groet, \n" + senderName + " \n" + senderMail + " \n" + senderPhone;
+            MailManager mailManager = new MailManager(mailSubject, mailMessage, "nigel@websentiment.nl");
             mailManager.SendMail();
             FieldsCleaner(false, true);
         }

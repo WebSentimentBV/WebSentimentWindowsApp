@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebSentiment.App" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.Classes.Category" Collapsed="true">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAgEAAgAAAAAAgAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.Client" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAggAAAAA=</HashCode>
+      <FileName>Classes\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.DatabaseManager">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAQAAEAAAAAAAAAECAAAAAAA=</HashCode>
+      <FileName>Classes\DatabaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.ImageManager">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ImageManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.MailManager">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Classes\MailManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.Page" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAgAAAAAAAAAAAAACAAAQAAEAAAAAIAAAQAA=</HashCode>
+      <FileName>Classes\Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.Classes.Project" Collapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAgEAAgAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <FileName>Classes\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.Contact" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACAEAAAAAAAgAMAAgACAgAAAAgAAAAAACAAAAEAA=</HashCode>
+      <FileName>UserControls\Activities\Contact.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.ImageText" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>UserControls\Activities\ImageText.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.Menu" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\Activities\Menu.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.Slider" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAAAAAAABAAAAACAAAAAAIAIAEAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\Activities\Slider.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.SliderProjects" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAgAAAAAAAAGAAAAAAAAAAEAgAAgAAAAgAA=</HashCode>
+      <FileName>UserControls\Activities\SliderProjects.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Activity.Text" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>UserControls\Activities\Text.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Header.Header" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAEAAAEkAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>UserControls\Headers\Header.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Objects.Button" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAgAEAAAAAABAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>UserControls\Objects\Button.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WebSentiment.UserControls.Page" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAAAAQEAAAAgQABAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>UserControls\Page.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -132,6 +132,7 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Data\WebSentimentDB.sqlite" />
     <Content Include="Assets\Helvetica-font.ttf" />
+    <None Include="..\..\..\Documentatie\Kerntaak-2\2.2.7_Klassendiagram-vanuit-visual-studio-en-verslag\2017-06-09-Visual-studio-klassediagram_V1.cd" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
