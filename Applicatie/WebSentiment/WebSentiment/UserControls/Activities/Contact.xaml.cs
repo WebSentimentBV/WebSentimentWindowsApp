@@ -42,7 +42,7 @@ namespace WebSentiment.UserControls.Activity
             string senderName = tbName.Text;
             string senderMail = tbMail.Text;
             string senderPhone = tbPhone.Text;
-            string mailSubject = "Contact bericht van " + senderName + " via Windows Applicatie";
+            string mailSubject = "Contact bericht van " + senderName + " via de Windowsapplicatie";
             string mailMessage = tbMessage.Text + "\n\nMet vriendelijke groet, \n" + senderName + " \n" + senderMail + " \n" + senderPhone;
             MailManager mailManager = new MailManager(mailSubject, mailMessage, "nigel@websentiment.nl");
             mailManager.SendMail();
