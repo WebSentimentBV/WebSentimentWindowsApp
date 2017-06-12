@@ -39,6 +39,7 @@ namespace WebSentiment.UserControls.Activity
 
         private void SendMail()
         {
+            //Take the input and send it to the next window (mail window).
             string senderName = tbName.Text;
             string senderMail = tbMail.Text;
             string senderPhone = tbPhone.Text;
@@ -50,7 +51,9 @@ namespace WebSentiment.UserControls.Activity
         }
         private async void BtnSendMail_Click(object sender, RoutedEventArgs e)
         {
+            //Clean the input, so that the user doesnt send it again.
             FieldsCleaner(true, false);
+            //Check the fields if the input is right
             if (FieldsChecker())
             {
                 var dialog = new Windows.UI.Popups.MessageDialog(
@@ -132,6 +135,13 @@ namespace WebSentiment.UserControls.Activity
             if (!match.Success)
             {
                 lblMail.Text = "Dit is geen geldig e-mailadres.";
+                return false;
+            }
+
+            string mailInput = tbMail.Text;
+            if (mailInput.Count() < 6 || mailInput.Count() > 60)
+            {
+                lblMail.Text = "Uw mail moet 6-60 karakters bevatten.";
                 return false;
             }
             return true;
